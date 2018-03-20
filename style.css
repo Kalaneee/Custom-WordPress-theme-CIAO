@@ -1,0 +1,24 @@
+/*
+Theme Name: Custom1
+Author: Valentin Kaelin
+Author URI: https://kalane.ch
+Description: Thème WordPress basé sur Bootstrap 3
+Version: 1.0
+Text Domain: Custom1
+*/
+
+/*body {
+	background-color: red;
+}*/
+
+.m-dw-30 {
+	margin-bottom: 30px;
+}
+
+footer {
+	background-color: lightblue;
+}
+
+.alignecenter {
+	margin: auto;
+}

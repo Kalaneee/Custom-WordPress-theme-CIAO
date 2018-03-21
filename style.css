@@ -15,10 +15,78 @@ Text Domain: Custom1
 	margin-bottom: 30px;
 }
 
-footer {
-	background-color: lightblue;
+.m-up-reset {
+	margin-top: 0;
 }
 
-.alignecenter {
+footer {
+	background-color: #CDDDC4;
+	margin-top: 20px;
+	padding-top: 25px;
+	padding-bottom: 100px;
+}
+
+.aligncenter {
+	display: block;
 	margin: auto;
+}
+
+.panel img {
+	margin-bottom: 15px;
+}
+
+footer .wrap-widget > .inside-widget {
+	background-color: #BAC6BC;
+	border-radius: 3%;
+	padding: 2% 5%;
+	min-height: 270px;
+	margin-bottom: 15px;
+}
+
+footer .wrap-widget > .inside-widget > h2 {
+	margin-top: 12px;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid black;
+}
+
+footer table#wp-calendar {
+	width: 100%;
+}
+
+footer table#wp-calendar caption {
+	text-align: center;
+	border-bottom: 1px solid #cdcdcd;
+	padding-bottom: 2px;
+	padding-top: 0;
+	margin-bottom: 6px;
+}
+
+footer table#wp-calendar tfoot tr td {
+	padding-top: 10px;
+}
+
+dl.gallery-item img.attachment-thumbnail {
+	height: auto;
+	max-width: 100%;
+}
+
+.vk-pagination a, .vk-pagination span {
+	display: inline-block;;
+	padding: 0 25px;
+	margin-bottom: 20px;
+}
+
+.vk-pagination a.prev {
+	padding-left: 0;
+}
+
+.vk-pagination span.page-numbers.current {
+	background-color: #333333;
+	color: #dddddd;
+}
+
+.jumbotron {
+	padding-top: 24px;
+	padding-bottom: 12px;
 }

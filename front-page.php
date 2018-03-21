@@ -1,5 +1,7 @@
 <?php get_header(); 
 
+get_template_part('slider', 'home');
+
 $args_blog = array(
 	'post_type' => 'post',
 	'posts_per_page' => 2
@@ -49,6 +51,7 @@ $req_blog = new WP_Query($args_blog); ?>
 					<?php while (have_posts()): the_post(); ?>
 						<div class="row">
 							<div class="col-xs-12">
+								<?php the_title('<h1 class="text-center">', '</h1>'); ?>
 								<?php the_content(); ?>
 							</div>
 						</div>

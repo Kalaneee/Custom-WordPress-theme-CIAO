@@ -54,7 +54,7 @@
 		</nav>
 	</header>
 
-
+<section>
 	<div class="container">
 		<div class="jumbotron">
 
@@ -74,3 +74,5 @@
 			</div>
 		</div>
 	</div> <!-- /container -->
+</section>
+	

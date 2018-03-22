@@ -7,9 +7,9 @@ Version: 1.0
 Text Domain: Custom1
 */
 
-/*body {
-	background-color: red;
-}*/
+body {
+	background-color: #EEE4D2;
+}
 
 .m-dw-30 {
 	margin-bottom: 30px;
@@ -19,6 +19,10 @@ Text Domain: Custom1
 	margin-top: 0;
 }
 
+.m-up-20 {
+	margin-top: 20px;
+}
+
 footer {
 	background-color: #CDDDC4;
 	margin-top: 20px;
@@ -26,7 +30,7 @@ footer {
 	padding-bottom: 100px;
 }
 
-.aligncenter {
+.alignecenter {
 	display: block;
 	margin: auto;
 }
@@ -89,4 +93,59 @@ dl.gallery-item img.attachment-thumbnail {
 .jumbotron {
 	padding-top: 24px;
 	padding-bottom: 12px;
+}
+
+
+/* Slider carousel */
+
+.carousel-inner .item h3 {
+	animation-delay: 0.4s;
+	font-size: 2.2em;
+	font-weight: bold;
+}
+
+.carousel-inner .item p {
+	animation-delay: 1s;
+	font-size: 1.2em;
+	background-color: rgba(0, 0, 0, 0.35);
+	padding: 10px 3%;
+}
+
+section#home-carousel {
+	background-color: #212121;
+}
+
+#slider-01 img {
+	margin: 15px auto;
+}
+
+#slider-01 .carousel-indicators li {
+	width: 15px;
+	height: 15px;
+}
+
+#slider-01 .carousel-indicators li.active {
+	width: 17px;
+	height: 17px;
+}
+
+#slider-01 .carousel-inner .item .carousel-caption {
+	bottom: 3%;
+}
+
+@media (max-width: 500px) {
+	#slider-01 .carousel-inner .item .carousel-caption {
+		width: 90%;
+		left: 5%;
+	}
+	#slider-01 .carousel-inner .item .carousel-caption p {
+		text-align: left;
+	}
+	#slider-01 .carousel-inner .item .carousel-caption h3 {
+		font-size: 1.1em;
+	}
+
+	#slider-01 .carousel-inner .item .carousel-caption a.btn {
+		padding: 3px 6px;
+	}
 }

@@ -10,11 +10,20 @@ function vk_scripts() {
 
 	// Chargement des styles
 	wp_enqueue_style('vk_bootstrap-core', get_template_directory_uri() . '/css/bootstrap.min.css', array(), VK_VERSION, 'all');
-	wp_enqueue_style('vk_custom', get_template_directory_uri() . '/style.css', array('vk_bootstrap-core'), VK_VERSION, 'all');
+
+	wp_enqueue_style('vk_animate', get_template_directory_uri() . '/css/animate.css', array(), VK_VERSION, 'all');
+
+	wp_enqueue_style('vk_custom', get_template_directory_uri() . '/style.css', array('vk_bootstrap-core', 'vk_animate'), VK_VERSION, 'all');
 
 	// Chargement des scripts
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), VK_VERSION, true);
 	wp_enqueue_script('vk_admin_script', get_template_directory_uri() . '/js/custom.js', array('bootstrap-js'), VK_VERSION, true);
+
+	if (is_page()):
+		wp_enqueue_script('vk_ajax_test_script', get_template_directory_uri() . '/js/ajax-test.js', array(), VK_VERSION, true);
+
+		wp_localize_script('vk_ajax_test_script', 'ajaxVars', array('url' => admin_url('admin-ajax.php')));
+	endif;
 
 
 } // fin function vk_scripts
@@ -58,6 +67,50 @@ function vk_admin_init() {
 
 add_action('admin_init', 'vk_admin_init');
 
+
+
+
+//=====================================================
+// Associer fonctions à exécuter après les actions ajax
+//=====================================================
+
+add_action('wp_ajax_mon_test_ajax', 'fn_mon_test_ajax'); // dispo only aux loggés
+add_action('wp_ajax_nopriv_mon_test_ajax', 'fn_mon_test_ajax'); // dispo ceux non loggés
+function fn_mon_test_ajax() {
+
+	global $wpdb;
+	$mot_recup = $_POST['data1'];
+	$mot_test = "%$mot_recup%";
+	$table_name = $wpdb->prefix . "posts";
+
+	$data_fetch = $wpdb->get_results(
+		$wpdb->prepare(
+			"SELECT * FROM $table_name WHERE post_content LIKE %s AND post_status='publish'",
+			$mot_test
+		)
+	);
+
+	$results_query = array();
+	$final_array = array();
+
+	if ($data_fetch):
+		$final_array["success"] = "true";
+		foreach ($data_fetch as $data_line) {
+			$results_query[] = array($data_line->post_title, $data_line->post_name, $data_line->guid);
+		}
+	else:
+		$final_array["success"] = "false";
+		$results_query[] = "pas de résultats";
+	endif;
+
+	$final_array["mot"] = $mot_recup;
+	$final_array["results"] = $results_query;
+
+	echo stripslashes(json_encode($final_array));
+
+	die();
+
+} // fin function fn_mon_test_ajax
 
 
 
@@ -159,6 +212,20 @@ function vk_setup() {
 } // fin function vk_setup
 
 add_action('after_setup_theme', 'vk_setup');
+
+
+
+
+//=====================================================
+//   Ajouter classe img-responsive à toutes les img
+//=====================================================
+
+function vk_add_img_class($class) {
+	$class .= ' img-responsive';
+	return $class;
+}
+
+add_filter('get_image_tag_class', 'vk_add_img_class');
 
 
 
@@ -266,7 +333,7 @@ function vk_slider_init() {
 		'menu_icon'				=> get_stylesheet_directory_uri() . '/assets/camera_16.png',
 		'publicly_queryable'	=> false,
 		'exclude_from_search'	=> true,
-		'supports'				=> array('title', 'editor', 'page-attributes', 'thumbnail')
+		'supports'				=> array('title', 'page-attributes', 'thumbnail')
 	);
 
 	register_post_type('vk_slider', $args);
@@ -307,7 +374,7 @@ function vk_content_show($column, $post_id) {
 
 
 //=====================================================
-// Ajout image et ordre dans la colonne admin : slider
+// 		Tri auto ordre colonne admin pour le slider
 //=====================================================
 
 function vk_change_slides_order($query) {

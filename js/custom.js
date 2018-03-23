@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 			doAnimations($animatingElems);
 		});
 
-		var $firstAnimatedElement = $myCarousel.find(".item:first").find("[data-animation ^= 'animated']");
+		var $firstAnimatedElement = $myCarousel.find(".carousel-item:first").find("[data-animation ^= 'animated']");
 		doAnimations($firstAnimatedElement); // animation au 1er chargement de la page
 
 		function doAnimations(elems) {

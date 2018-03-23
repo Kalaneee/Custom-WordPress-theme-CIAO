@@ -9,14 +9,16 @@ define('VK_VERSION', '1.0.2');
 function vk_scripts() {
 
 	// Chargement des styles
-	wp_enqueue_style('vk_bootstrap-core', get_template_directory_uri() . '/css/bootstrap.min.css', array(), VK_VERSION, 'all');
+	wp_enqueue_style('vk_bootstrap-core', get_template_directory_uri() . '/css/bootstrap.min-4-0.css', array(), VK_VERSION, 'all');
 
 	wp_enqueue_style('vk_animate', get_template_directory_uri() . '/css/animate.css', array(), VK_VERSION, 'all');
 
 	wp_enqueue_style('vk_custom', get_template_directory_uri() . '/style.css', array('vk_bootstrap-core', 'vk_animate'), VK_VERSION, 'all');
 
 	// Chargement des scripts
-	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), VK_VERSION, true);
+	wp_enqueue_script('popper-js', get_template_directory_uri() . '/js/popper.min.js', array(), VK_VERSION, true);
+	wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min-4-0.js', array('popper-js'), VK_VERSION, true);
+
 	wp_enqueue_script('vk_admin_script', get_template_directory_uri() . '/js/custom.js', array('bootstrap-js'), VK_VERSION, true);
 
 	if (is_page()):
@@ -46,7 +48,7 @@ function vk_admin_init() {
 		}
 
 		// chargement des styles admin
-		wp_enqueue_style('bootstrap-adm-core', get_template_directory_uri() . '/css/bootstrap.min.css', array(), VK_VERSION);
+		wp_enqueue_style('bootstrap-adm-core', get_template_directory_uri() . '/css/bootstrap.min-3-3.css', array(), VK_VERSION);
 
 
 		// chargement des scripts admin
@@ -166,7 +168,7 @@ function vk_widgets_init() {
 		'name'			=> 'Footer Widget Zone',
 		'description'	=> 'Widgets affichés dans le footer : 4 au maximum',
 		'id'			=> 'widgetized-footer',
-		'before_widget'	=> '<div id="%1$s" class="col-xs-12 col-sm-6 col-md-3 wrap-widget %2$s"><div class="inside-widget">',
+		'before_widget'	=> '<div id="%1$s" class="col-12 col-sm-6 col-lg-3 wrap-widget %2$s d-flex"><div class="inside-widget w-100 pb-3">',
 		'after_widget'	=> '</div></div>',
 		'before_title'	=> '<h2 class="h3 text-center">',
 		'after_title'	=> '</h2>',
@@ -202,7 +204,7 @@ function vk_setup() {
 
 
 	// regiser custom navigation walker
-	require_once('includes/wp_bootstrap_navwalker.php');
+	require_once('includes/class-wp-bootstrap-navwalker.php');
 
 
 	// active la gestion des menus
@@ -221,7 +223,7 @@ add_action('after_setup_theme', 'vk_setup');
 //=====================================================
 
 function vk_add_img_class($class) {
-	$class .= ' img-responsive';
+	$class .= ' img-fluid';
 	return $class;
 }
 

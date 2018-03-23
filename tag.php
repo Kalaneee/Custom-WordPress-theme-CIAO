@@ -4,7 +4,7 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-12">
 					<p class="lead">Articles avec l'étiquette <?php single_tag_title(''); ?> </p>
 				</div>
 			</div>
@@ -20,7 +20,7 @@
 			
 			<?php else: ?>
 					<div class="row">
-						<div class="col-sx-12">
+						<div class="col-12">
 							<p>Aucun résultat</p>
 						</div>
 					</div>

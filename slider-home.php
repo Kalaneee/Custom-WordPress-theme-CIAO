@@ -10,7 +10,7 @@ $slider_query = new WP_Query($args);
 
 if ($slider_query->have_posts()): ?>
 
-	<section id="home-carousel" class="m-dw-30">
+	<section id="home-carousel" class="mb-3">
 	<div class="container">
 	<div id="slider-01" class="carousel slide">
 		<!-- Indicators -->
@@ -44,8 +44,8 @@ if ($slider_query->have_posts()): ?>
 							$alt_val = $alt_val[0];
 					} ?>
 
-					<div class="item<?= ($active_test ? " active" : ""); ?>">
-						<img src="<?= $thumbnail_src; ?> " alt="<?= ($is_alt_empty ? "" : $alt_val); ?>" style="width: 100%">
+					<div class="carousel-item<?= ($active_test ? " active" : ""); ?>">
+						<img class="d-block w-100" src="<?= $thumbnail_src; ?> " alt="<?= ($is_alt_empty ? "" : $alt_val); ?>">
 						<div class="carousel-caption">
 							<h3 data-animation="animated bounceInDown"><? the_title(); ?></h3>
 							<p  data-animation="animated bounceInDown"><?php the_field('sous_titre'); ?></p>
@@ -59,12 +59,12 @@ if ($slider_query->have_posts()): ?>
 		</div>
 
 		<!-- Controls -->
-		<a class="left carousel-control" href="#slider-01" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<a class="carousel-control-prev" href="#slider-01" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="right carousel-control" href="#slider-01" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<a class="carousel-control-next" href="#slider-01" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
 	</div> <!-- /carousel -->

@@ -23,35 +23,32 @@
 <body>
 
 	<header>
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="/">Accueil</a>
-				</div>
 
-				<?php 
-					wp_nav_menu(array(
-						'menu'				=> 'top-menu',
-						'theme_location' 	=> 'primary',
-						'depth'				=> 2,
-						'container'			=> 'div',
-						'container_class'	=> 'navbar-collapse collapse',
-						'container_id'		=> 'navbar',
-						'menu_class'		=> 'nav navbar-nav',
-						'fallback_cb'		=> 'wp_bootstrap_navwalker::fallback',
-						'walker'			=> new wp_bootstrap_navwalker()
-						)
-					);
-				?>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+		  <div class="container">
 
-			</div>
+		    <a class="navbar-brand" href="<?= bloginfo('url'); ?>">Accueil</a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+
+		    <?php 
+		      wp_nav_menu(array(
+		        'menu'            => 'top-menu',
+		        'theme_location'  => 'primary',
+		        'depth'           => 2,
+		        'container'       => 'div',
+		        'container_class' => 'collapse navbar-collapse',
+		        'container_id'    => 'navbar',
+		        'menu_class'      => 'nav navbar-nav ml-auto',
+		        'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+		        'walker'          => new wp_bootstrap_navwalker()
+		        )); 
+		    ?>
+
+		  </div> <!-- /container -->
 		</nav>
+
 	</header>
 
 <section>
@@ -61,11 +58,11 @@
 			<?php $theme_opts = get_option('vk_opts'); ?>
 
 			<div class="row">
-				<div class="col-xs-4">
-					<img class="img-responsive" src="<?= $theme_opts['image_01_url']; ?>" alt=""></img>
+				<div class="col-4">
+					<img class="img-fluid" src="<?= $theme_opts['image_01_url']; ?>" alt=""></img>
 					<p class="text-center"><?= stripslashes($theme_opts['legend_01']); ?></p>
 				</div>
-				<div class="col-xs-8">
+				<div class="col-8">
 					<h1 class="m-up-reset">Coucou c'est nous</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

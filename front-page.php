@@ -13,18 +13,18 @@ $req_blog = new WP_Query($args_blog); ?>
 		<div class="container">
 			<div class="row">
 				<?php while($req_blog->have_posts()): $req_blog->the_post(); ?>
-					<div class="col-xs-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">
+					<div class="col-12 col-sm-6 d-flex mb-3">
+						<div class="card">
+							<div class="card-header">
 								<h2 class="text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							</div>
-							<div class="panel-body">
+							<div class="card-body">
 								<a href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail('medium', array('class' => 'img-responsive alignecenter')); ?>
+									<?php the_post_thumbnail('medium', array('class' => 'img-fluid alignecenter')); ?>
 								</a>
 								<?php the_excerpt(); ?>
 							</div>
-							<div class="panel-footer">
+							<div class="card-footer">
 								<p>
 									<?= vk_give_me_meta_01(
 											esc_attr(get_the_date('c')),
@@ -48,7 +48,7 @@ $req_blog = new WP_Query($args_blog); ?>
 			<?php if (have_posts()): ?>
 					<?php while (have_posts()): the_post(); ?>
 						<div class="row">
-							<div class="col-xs-12">
+							<div class="col-12">
 								<?php the_title('<h1 class="text-center">', '</h1>'); ?>
 								<?php the_content(); ?>
 							</div>
@@ -58,7 +58,7 @@ $req_blog = new WP_Query($args_blog); ?>
 			
 			<?php else: ?>
 					<div class="row">
-						<div class="col-sx-12">
+						<div class="col-12">
 							<p>Aucun résultat</p>
 						</div>
 					</div>

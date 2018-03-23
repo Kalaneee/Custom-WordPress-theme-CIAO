@@ -21,20 +21,20 @@
 					<div class="container">
 						<div class="row">
 							<?php while($req_blog->have_posts()): $req_blog->the_post(); ?>
-								<div class="col-xs-12 col-sm-6">
-									<div class="panel panel-default">
-										<div class="panel-heading">
+								<div class="col-12 col-sm-6 d-flex">
+									<div class="card mb-3">
+										<div class="card-header">
 											<h2 class="text-center">
 												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 											</h2>
 										</div>
-										<div class="panel-body">
+										<div class="card-body">
 											<a href="<?php the_permalink(); ?>">
-												<?php the_post_thumbnail('medium', array('class' => 'img-responsive alignecenter')); ?>
+												<?php the_post_thumbnail('medium', array('class' => 'img-fluid alignecenter')); ?>
 											</a>
 											<?php the_excerpt(); ?>
 										</div>
-										<div class="panel-footer">
+										<div class="card-footer">
 											<p>
 												<?= 
 													vk_give_me_meta_01(

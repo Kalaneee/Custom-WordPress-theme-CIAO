@@ -35,7 +35,7 @@ footer {
 	margin: auto;
 }
 
-.panel img {
+.card img {
 	margin-bottom: 15px;
 }
 
@@ -43,7 +43,6 @@ footer .wrap-widget > .inside-widget {
 	background-color: #BAC6BC;
 	border-radius: 3%;
 	padding: 2% 5%;
-	min-height: 270px;
 	margin-bottom: 15px;
 }
 
@@ -52,6 +51,7 @@ footer .wrap-widget > .inside-widget > h2 {
 	margin-bottom: 15px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid black;
+	font-size: 1.15rem;
 }
 
 footer table#wp-calendar {
@@ -64,6 +64,7 @@ footer table#wp-calendar caption {
 	padding-bottom: 2px;
 	padding-top: 0;
 	margin-bottom: 6px;
+	caption-side: top;
 }
 
 footer table#wp-calendar tfoot tr td {
@@ -98,13 +99,13 @@ dl.gallery-item img.attachment-thumbnail {
 
 /* Slider carousel */
 
-.carousel-inner .item h3 {
+.carousel-inner .carousel-item h3 {
 	animation-delay: 0.4s;
 	font-size: 2.2em;
 	font-weight: bold;
 }
 
-.carousel-inner .item p {
+.carousel-inner .carousel-item p {
 	animation-delay: 1s;
 	font-size: 1.2em;
 	background-color: rgba(0, 0, 0, 0.35);
@@ -119,7 +120,7 @@ section#home-carousel {
 	margin: 15px auto;
 }
 
-#slider-01 .carousel-indicators li {
+/*#slider-01 .carousel-indicators li {
 	width: 15px;
 	height: 15px;
 }
@@ -127,25 +128,30 @@ section#home-carousel {
 #slider-01 .carousel-indicators li.active {
 	width: 17px;
 	height: 17px;
-}
+}*/
 
-#slider-01 .carousel-inner .item .carousel-caption {
+#slider-01 .carousel-inner .carousel-item .carousel-caption {
 	bottom: 3%;
 }
 
 @media (max-width: 500px) {
-	#slider-01 .carousel-inner .item .carousel-caption {
+	#slider-01 .carousel-inner .carousel-item .carousel-caption {
 		width: 90%;
 		left: 5%;
 	}
-	#slider-01 .carousel-inner .item .carousel-caption p {
+	#slider-01 .carousel-inner .carousel-item .carousel-caption p {
 		text-align: left;
 	}
-	#slider-01 .carousel-inner .item .carousel-caption h3 {
+	#slider-01 .carousel-inner .carousel-item .carousel-caption h3 {
 		font-size: 1.1em;
 	}
 
-	#slider-01 .carousel-inner .item .carousel-caption a.btn {
+	#slider-01 .carousel-inner .carousel-item .carousel-caption a.btn {
 		padding: 3px 6px;
 	}
+}
+
+ul.vk-pager {
+	list-style-type: none;
+	padding-left: 0;
 }

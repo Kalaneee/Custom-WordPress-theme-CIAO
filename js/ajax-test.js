@@ -18,14 +18,32 @@ jQuery(document).ready(function($) {
 				data2 : 'xxxxxxx'
 			},
 			success : function(response) {
+
+				var myOutput = "";
+				myOutput += "<p>Articles contenant le mot: <b>" + response.mot + "</b></p>";
+
 				if (response.success == "true") {
 
+					myOutput += '<table class="table">'
 					for (var i = 0; i < response.results.length; i++) {
-						console.log("** " + response.results[i]);
+						var guid = response.results[i][2];
+						var v1 = guid.indexOf('?');
+						var v2 = guid.slice(0, v1);
+						var myLink = v2 + response.results[i][1];
+						myOutput += '<tr><td>';
+						myOutput += response.results[i][0];
+						myOutput += '</td><td>';
+						myOutput+= '<a href="' + myLink + '" target="_blank">' + myLink + '</a>';
+						myOutput += '</td></tr>';
 					}
+					myOutput += '</table>';
+
 				} else {
-					console.log("pas de résultats");
+					myOutput += '<p>Il n\'y a pas de résultats à votre recherche</p>';
 				}
+
+				$("#result").html(myOutput);
+
 			},
 			error : function(xhr, error, exception) {
 				console.log('message d\'erreur ' + error);

@@ -12,7 +12,7 @@
 			
 			<?php else: ?>
 					<div class="row">
-						<div class="col-sx-12">
+						<div class="col-12">
 							<p>Aucun résultat</p>
 						</div>
 					</div>

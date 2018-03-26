@@ -1,12 +1,23 @@
 <?php get_header(); ?>
 
 	<section>
-		<div class="container">
+		<div class="container white-card">
 			<?php if(have_posts()): ?>
 				<?php while(have_posts()): the_post(); ?>
 					<div class="row mb-3">
 						<div class="col-12">
-							<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+							<h1 class="title"><a href="<?php the_permalink(); ?>">
+								<?php 
+								global $pagename;
+								if ($pagename == "ciao-ch") {
+									the_title(); 
+									echo " offre";
+								}
+								else {
+									the_title(); 
+								}
+						
+							?></a></h1>
 							<?php the_content(); ?>
 						</div>
 					</div> <!-- /row -->

@@ -1,26 +1,11 @@
-<footer>
-	<div class="container">
-		<div class="row">
-
-			<?php if(is_active_sidebar('widgetized-footer')): ?>
-
-				<?php dynamic_sidebar('widgetized-footer'); ?>
-
-			<?php else: ?>
-
-
-			<div class="col-12">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
-			</div>
-		<?php endif; ?>
-		</div>
+</div> <!-- /wrapper -->
+<footer class="footer">
+	<div class="n-container">
+		<div class="footer-copyright">
+        	<p>© 2018 Association romande CIAO - <a href="https://kalane.ch">Réalisé par Valentin Kaelin</a></p>
+    	</div>
 	</div>
-	</footer>
+</footer>
 
 	<?php wp_footer(); ?>
 </body>

@@ -7,8 +7,36 @@ Version: 1.0
 Text Domain: Custom1
 */
 
+
+
+/* 
+Palette :
+#379392
+#4FB0C6
+#4F86C6
+#6C49B8
+*/
+
+
+
+/* GENERAL */
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+}
+
 body {
-	background-color: #EEE4D2;
+	background-color: #eee;
 }
 
 .m-dw-30 {
@@ -23,12 +51,274 @@ body {
 	margin-top: 20px;
 }
 
-footer {
-	background-color: #CDDDC4;
-	margin-top: 20px;
-	padding-top: 25px;
-	padding-bottom: 100px;
+.n-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
+
+.bg-dark {
+    background-color: #7d3c98 !important;
+}
+
+h1 a{
+	text-decoration: none !important;
+	color: black;
+	font-weight: bold;
+}
+
+.container {
+	margin-top: 25px;
+}
+
+.white-card {
+    width: auto;
+    min-height: inherit;
+    position: static;
+    overflow: visible;
+    display: block;
+    padding: 45px 25px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03), 0 3px 1px -2px rgba(0, 0, 0, 0.03), 0 1px 5px 0 rgba(0, 0, 0, 0.03);
+    background: #fff;
+    border-radius: 2px;
+}
+iframe {
+	display: block;
+	margin: 0 auto;
+	/*width: 80%;*/
+}
+
+@media (max-width: 600px) {
+
+	iframe {
+		width: 400px;
+		height: 224px;
+	}
+}
+
+
+/* NAVBAR */
+.navbar-dark {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+.navbar-dark .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-item {
+    display: inline;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.65);
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.3;
+}
+
+.header a {
+	text-decoration: none;
+}
+
+.header .top .fa-twitter:hover {
+    color: #00aced;
+    transition: 0.4s;
+}
+
+.header .top .fa-facebook:hover {
+    color: #3b5998;
+    transition: 0.4s;
+}
+
+.header .slogan:hover {
+	color: #f1c40f;
+	transition: 0.4s;
+}
+
+.top {
+	position: fixed;
+	width: 100%;
+	z-index: 10000000;
+}
+
+.navbar .current-menu-item a {
+	color: #BDBDBD !important;
+}
+
+
+/* FRONT PAGE */
+.header {
+	background: url(assets/blur6.png);
+	height: 280px;
+	position: relative;
+}
+
+.header .top {
+	background-color: #2e2630;
+	color: #fff;
+	border-bottom: 5px solid #f1c40f;
+
+}
+
+.header .top a {
+	height: 48px;
+	line-height: 48px;
+	padding: 0 15px;
+	background-color: #2A242C;
+	text-transform: uppercase;
+	color: #fff;
+	/*font-weight: bold;*/
+}
+
+.header .logo {
+	position: relative;
+	top: -30px;
+}
+
+.header .logo img {
+	z-index: 1000;
+	position: absolute;
+	height: 100px;
+	left: 50%;
+	top: 195px;
+	transform: translate(-50%, -50%);
+}
+
+
+/* FOOTER */
+
+.footer {
+    margin-top: 15px;
+    background: #323232;
+    border-top: 5px solid #f1c40f;
+    color: #fff;
+    /*height: 48px;*/
+}
+
+.footer p {
+	line-height: 48px;
+	margin-bottom: 0;
+}
+
+.footer a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.footer a:hover {
+	color: rgba(255,255,255,0.8);
+}
+
+
+
+
+/* CONTACT */
+
+.wpcf7 {
+	padding: 25px !important;
+}
+
+.wpcf7 label, .wpcf7 input, .wpcf7 textarea {
+	width: 100%;
+}
+
+.wpcf7 span {
+	display: block;
+	width: 100%;
+}
+
+#contact iframe {
+	width: 100%;
+	height: 448px;
+	margin: 0 auto;
+}
+
+#contact label {
+	font-weight: bold;
+}
+
+#contact input[type="submit"] {
+	width: 100%;
+	height: 50px;
+	background-color: #323232;
+	border: 2px solid #f1c40f;
+	border-radius: 3px;
+	color: #fff
+}
+
+#contact input[type="submit"]:hover {
+	background-color: #f1c40f;
+	border: 2px solid #323232;
+	transition: 0.4s;
+	color: #323232;
+}
+
+#contact .contact-left {
+	padding-right: 15px;
+}
+
+#contact .contact-right {
+	padding-left: 15px;
+
+}
+
+#contact .white-card {
+	margin-bottom: 15px;
+}
+
+#contact .contact-right .white-card {
+	text-align: center;
+	width: 100%;
+}
+
+#contact hr {
+	display: block;
+    height: 1px;
+    left: 10%;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em auto;
+    padding: 0;
+}
+#contact .card {
+	margin: 0 20px;
+}
+#contact .card-title {
+	font-weight: bold;
+}
+
+#contact .wpcf7 .wpcf7-form p:last-of-type {
+	margin-bottom: 0;
+}
+
+
+/*
+.wpcf7-form-control wpcf7-text wpcf7-validates-as-required .wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email{
+
+width: 100%;
+padding: 16px;
+border: none;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+color: #999;
+background-color: #eee;
+font-size: 14px;}
+
+
+
+
+
+/* OTHER */
+
 
 .alignecenter {
 	display: block;
@@ -37,38 +327,6 @@ footer {
 
 .card img {
 	margin-bottom: 15px;
-}
-
-footer .wrap-widget > .inside-widget {
-	background-color: #BAC6BC;
-	border-radius: 3%;
-	padding: 2% 5%;
-	margin-bottom: 15px;
-}
-
-footer .wrap-widget > .inside-widget > h2 {
-	margin-top: 12px;
-	margin-bottom: 15px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid black;
-	font-size: 1.15rem;
-}
-
-footer table#wp-calendar {
-	width: 100%;
-}
-
-footer table#wp-calendar caption {
-	text-align: center;
-	border-bottom: 1px solid #cdcdcd;
-	padding-bottom: 2px;
-	padding-top: 0;
-	margin-bottom: 6px;
-	caption-side: top;
-}
-
-footer table#wp-calendar tfoot tr td {
-	padding-top: 10px;
 }
 
 dl.gallery-item img.attachment-thumbnail {
@@ -119,16 +377,6 @@ section#home-carousel {
 #slider-01 img {
 	margin: 15px auto;
 }
-
-/*#slider-01 .carousel-indicators li {
-	width: 15px;
-	height: 15px;
-}
-
-#slider-01 .carousel-indicators li.active {
-	width: 17px;
-	height: 17px;
-}*/
 
 #slider-01 .carousel-inner .carousel-item .carousel-caption {
 	bottom: 3%;

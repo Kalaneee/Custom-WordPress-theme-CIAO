@@ -21,13 +21,35 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+<div class="wrapper">
+
+	<div class="header">
+		<div class="top">
+			<div class="n-container">
+				<a href="http://bourrédesavoir.ch" class="slogan">Association <b>CIAO</b></a>
+				<div style="float: right;">
+					<a href="">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a href="">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="n-container">
+			<div class="logo">
+				<a href=""><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
+			</div>
+		</div>
+	</div>
+
 
 	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <div class="n-container">
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-		  <div class="container">
-
-		    <a class="navbar-brand" href="<?= bloginfo('url'); ?>">Accueil</a>
+		    <!--<a class="navbar-brand" href="<?= bloginfo('url'); ?>">Accueil</a>-->
 		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
@@ -48,10 +70,14 @@
 
 		  </div> <!-- /container -->
 		</nav>
-
 	</header>
 
-<section>
+
+
+
+
+<?php /*
+<section id="picture">
 	<div class="container">
 		<div class="jumbotron">
 
@@ -72,4 +98,6 @@
 		</div>
 	</div> <!-- /container -->
 </section>
+
+ */?>
 	

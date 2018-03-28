@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 
 	if (document.getElementById("form-ajax-test")) {
+		console.log("im in");
 
 		$('form#form-ajax-test').on('submit', function(e) {
 

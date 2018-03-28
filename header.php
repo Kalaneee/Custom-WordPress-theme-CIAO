@@ -28,18 +28,27 @@
 			<div class="n-container">
 				<a href="http://bourrédesavoir.ch" class="slogan">Association <b>CIAO</b></a>
 				<div style="float: right;">
-					<a href="">
+					<a href="https://twitter.com/associationciao" target="_blank">
 						<i class="fa fa-twitter"></i>
 					</a>
-					<a href="">
+					<a href="https://www.facebook.com/ciao.ch/" target="_blank">
 						<i class="fa fa-facebook"></i>
+					</a>
+					<a href="https://www.youtube.com/user/wwwciaoch/feed" target="_blank">
+						<i class="fa fa-youtube"></i>
+					</a>
+					<a href="http://www.ciao.ch/f/" target="_blank">
+						<i class="fa fa-globe"></i>
+					</a>
+					<a data-toggle="modal" data-target="#exampleModal">
+						<i class="fa fa-search"></i>
 					</a>
 				</div>
 			</div>
 		</div>
 		<div class="n-container">
 			<div class="logo">
-				<a href=""><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
+				<a href="http://bourrédesavoir.ch"><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
 			</div>
 		</div>
 	</div>
@@ -74,6 +83,35 @@
 
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Rechercher</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<form role="search" method="get" id="searchform" class="searchform" action="http://xn--bourrdesavoir-fhb.ch/">
+				<div class="form-row">
+					<div class="col">
+						<input class="form-control" type="text" value="" name="s" id="s">
+					</div>
+					<div class="col">
+						<input class="btn btn-primary btn-search" type="submit" id="searchsubmit" value="Rechercher">
+					</div>
+				</div>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <?php /*

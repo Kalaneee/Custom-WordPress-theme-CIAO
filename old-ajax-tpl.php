@@ -5,20 +5,7 @@ Template Name: Ajax-Test
 
 get_header(); ?>
 
-
-	<section id="search">
-		<div class="container">
-			
-			<form role="search" method="get" id="searchform" class="searchform" action="http://xn--bourrdesavoir-fhb.ch/">
-				<div>
-					<label class="screen-reader-text" for="s">Rechercher&nbsp;:</label>
-					<input type="text" value="" name="s" id="s">
-					<input type="submit" id="searchsubmit" value="Rechercher">
-				</div>
-			</form>
-
-			<?php /*
-	<section id="search">
+	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-12 alert alert-success">
@@ -29,7 +16,7 @@ get_header(); ?>
 					</form>
 					<div id="result" class="m-up-20"></div>
 				</div>
-			</div> */?>
+			</div>
 
 
 			<?php if(have_posts()): ?>
@@ -50,7 +37,8 @@ get_header(); ?>
 				</div>
 			<?php endif; ?>
 
+
 		</div> <!-- /container -->
-	</section> 
+	</section>
 
 <?php get_footer(); ?>

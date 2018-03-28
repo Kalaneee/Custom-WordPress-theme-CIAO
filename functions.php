@@ -18,6 +18,9 @@ function vk_scripts() {
 
 	// Chargement des fonts
 	wp_enqueue_style('vk_font_open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans', array(), VK_VERSION, 'all');
+	wp_enqueue_style('vk_font_gochi-hand', 'https://fonts.googleapis.com/css?family=Gochi+Hand', array(), VK_VERSION, 'all');
+
+	wp_enqueue_style('vk_material-design', 'https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css', array(), VK_VERSION, 'all');
 
 
 	// Chargement des scripts
@@ -229,7 +232,7 @@ add_action('after_setup_theme', 'vk_setup');
 
 
 //=====================================================
-//   Ajouter classe img-responsive à toutes les img
+//    Ajouter classe img-fluid à toutes les img
 //=====================================================
 
 function vk_add_img_class($class) {
@@ -289,7 +292,7 @@ function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
 //=====================================================
 
 function vk_excerpt_more($more) {
-	return '<a class="more-link" href="' . get_permalink() . '">' . ' [lire la suite]' . '</a>';
+	return '<p><a class="more-link" href="' . get_permalink() . '">' . ' <b>Lire la suite »</b>' . '</a></p>';
 }
 add_filter('excerpt_more', 'vk_excerpt_more');
 

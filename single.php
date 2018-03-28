@@ -24,8 +24,16 @@
 						<div class="col-12">
 							<nav>
 								<ul class="vk-pager">
-									<li class="float-left"><?php previous_post_link(); ?></li>
-									<li class="float-right"><?php next_post_link(); ?></li>
+									<li class="float-left">
+										<button class="btn btn-primary">
+											<?php previous_post_link(); ?>
+										</button>
+									</li>
+									<li class="float-right">
+										<button class="btn btn-primary">
+											<?php next_post_link(); ?>
+										</button>
+									</li>
 								</ul>
 							</nav>
 						</div> <!-- col-12 -->

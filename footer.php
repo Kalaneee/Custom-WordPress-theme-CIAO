@@ -2,7 +2,7 @@
 <footer class="footer">
 	<div class="n-container">
 		<div class="footer-copyright">
-        	<p>© 2018 Association romande CIAO - <a href="https://kalane.ch">Réalisé par Valentin Kaelin</a></p>
+        	<p>© 2018 Association romande CIAO - <small><a href="https://kalane.ch">Réalisé par Valentin Kaelin</a></small></p>
     	</div>
 	</div>
 </footer>

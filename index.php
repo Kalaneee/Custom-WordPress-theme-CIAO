@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
-	<section>
+	<section id="list-articles">
 		<div class="container">
+			<div class="search-div-title white-card">
+				<h2>Résultats pour la recherche : <em><?= get_query_var('s'); ?></em></h2>
+			</div>
 			<?php if (have_posts()): ?>
 					<?php while (have_posts()): the_post(); 
 
@@ -17,6 +20,8 @@
 						</div>
 					</div>
 			<?php endif; ?>
+			
+			
 
 
 
@@ -28,15 +33,17 @@
 
 				if ($total_pages > 1): ?>
 					<div class="col-12 vk-pagination">
-						<?= paginate_links(array(
-							'base'		=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-							'format'	=> '/page/%#%',
-							'current'	=> max(1, get_query_var('paged')),
-							'total'		=> $total_pages,
-							'prev_next'	=> True,
-							'prev_text'	=> '« Page précédente',
-							'next_text'	=> 'Page suivante »'
+						<div class="pagination-wrapper">
+							<?= paginate_links(array(
+								'base'		=> str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+								'format'	=> '/page/%#%',
+								'current'	=> max(1, get_query_var('paged')),
+								'total'		=> $total_pages,
+								'prev_next'	=> True,
+								'prev_text'	=> '« Page précédente',
+								'next_text'	=> 'Page suivante »'
 							)); ?>
+						</div>
 					</div>
 				<?php endif; // fin bloc pagination ?>
 			</div>

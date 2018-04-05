@@ -40,7 +40,7 @@
 					<a href="http://www.ciao.ch/f/" target="_blank">
 						<i class="fa fa-globe"></i>
 					</a>
-					<a data-toggle="modal" data-target="#exampleModal">
+					<a href="#" data-toggle="modal" data-target="#exampleModal" class="clickable">
 						<i class="fa fa-search"></i>
 					</a>
 				</div>

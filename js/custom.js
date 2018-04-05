@@ -1,17 +1,47 @@
 
 jQuery(document).ready(function($) {
 
+	// Add slideDown animation to Bootstrap dropdown when expanding.
+	$('.dropdown').on('show.bs.dropdown', function() {
+		$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+	});
+
+	// Add slideUp animation to Bootstrap dropdown when collapsing.
+	$('.dropdown').on('hide.bs.dropdown', function() {
+		$(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+	});
 
 
-	  // Add slideDown animation to Bootstrap dropdown when expanding.
-	  $('.dropdown').on('show.bs.dropdown', function() {
-    	$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-    });
+	// Add responsive to all img
+	$('.alignleft').addClass('img-fluid');
+	$('.aligncenter').addClass('img-fluid');
+	$('.alignright').addClass('img-fluid');
 
-	  // Add slideUp animation to Bootstrap dropdown when collapsing.
-	  $('.dropdown').on('hide.bs.dropdown', function() {
-	    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-	  });
+
+	// Check if prec / next article btn is empty
+	if ( !($('button.btn-prev-art a').length) ) {
+	 $('.btn-prev-art').css({
+	 	'background-color' : 'transparent',
+	 	'border-color' : 'transparent'
+	 });
+	}
+
+	if ( !($('button.btn-next-art a').length) ) {
+	 $('.btn-next-art').css({
+	 	'background-color' : 'transparent',
+	 	'border-color' : 'transparent'
+	 });
+	}
+
+	// Change the text of the pagination on mobile
+	 if ($(window).width() < 780) {
+
+	 	$('.prev.page-numbers').text('«');
+	 	$('.next.page-numbers').text('»');
+	 	$('.pagination-wrapper').css('width', '100%').addClass('d-flex').addClass('justify-content-around');
+	 }
+	  
+
 
 	if (document.getElementById("slider-01")) {
 

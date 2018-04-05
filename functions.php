@@ -269,7 +269,7 @@ add_filter('image_size_names_choose', 'my_images_sizes');
 
 // Modèle du résultat : <time class="entry-date" datetime="2017-02-20T16:20:08+00:00">20 février 2017</time>
 
-function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
+/*function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
 
 	$chaine = 'publié le <time class="entry-date" datetime="';
 	$chaine .= $date1;
@@ -281,6 +281,17 @@ function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
 	if ($tags != NULL) {
 		$chaine .= ' avec les étiquettes: ' . $tags;
 	}
+	return $chaine;
+}*/
+
+function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
+
+	$chaine = 'Publié le <time class="entry-date" datetime="';
+	$chaine .= $date1;
+	$chaine .= '">';
+	$chaine	.= $date2;
+	$chaine .= '</time>';
+	
 	return $chaine;
 }
 
@@ -402,3 +413,15 @@ function vk_change_slides_order($query) {
 }
 
 add_action('pre_get_posts', 'vk_change_slides_order');
+
+
+//=====================================================
+// 		Ajout méthode pour get les url safe
+//=====================================================
+
+function add_get_val() { 
+    global $wp; 
+    $wp->add_query_var('s'); 
+}
+
+add_action('init','add_get_val');

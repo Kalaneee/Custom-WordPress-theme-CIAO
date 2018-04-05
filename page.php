@@ -1,12 +1,15 @@
 <?php get_header(); ?>
 
 	<section>
-		<div class="container white-card">
-			<?php if(have_posts()): ?>
+		<div class="container">
+			
+				<?php if(have_posts()): ?>
 				<?php while(have_posts()): the_post(); ?>
 					<div class="row mb-3">
 						<div class="col-12">
-							<h1 class="title"><a href="<?php the_permalink(); ?>">
+
+
+							<div class="title">
 								<?php 
 								global $pagename;
 								if ($pagename == "ciao-ch") {
@@ -16,8 +19,12 @@
 								else {
 									the_title(); 
 								}
-						
-							?></a></h1>
+							?>
+								<img src="<?= get_template_directory_uri(); ?>/assets/blue-line.png" class="blue-line">
+							</div>
+
+							<div class="white-card">
+
 							<?php the_content(); ?>
 						</div>
 					</div> <!-- /row -->
@@ -30,6 +37,7 @@
 					</div>
 				</div>
 			<?php endif; ?>
+			</div> <!-- /white-card -->
 		</div> <!-- /container -->
 	</section>
 

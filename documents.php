@@ -8,6 +8,10 @@ get_header(); ?>
 <section id="documents">
 	<div class="container">
 
+		<div class="title"> Documents
+			<img src="<?= get_template_directory_uri(); ?>/assets/blue-line.png" class="blue-line">
+		</div>
+
 		<!-- First row -->
 		<div class="card-deck">
 		  <div class="card">

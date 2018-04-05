@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 
-	<section>
+	<section id="article">
 		<div class="container">
-			<?php if (have_posts()): ?>
+			<div class="white-card-article p-3">
+				<?php if (have_posts()): ?>
 					<?php while (have_posts()): the_post(); ?>
 
 							<div class="row mb-5">
@@ -20,18 +21,18 @@
 							</div> <!-- /row -->
 					<?php endwhile; ?>
 
-					<div class="row">
-						<div class="col-12">
+					<div class="row mb-5">
+						<div class="col-12 mb-3">
 							<nav>
 								<ul class="vk-pager">
 									<li class="float-left">
-										<button class="btn btn-primary">
-											<?php previous_post_link(); ?>
+										<button class="btn btn-primary btn-prev-art">
+											<?php previous_post_link( '%link','« Article précédent' ); ?>
 										</button>
 									</li>
 									<li class="float-right">
-										<button class="btn btn-primary">
-											<?php next_post_link(); ?>
+										<button class="btn btn-primary btn-next-art">
+											<?php next_post_link( '%link','Article suivant »' ); ?>
 										</button>
 									</li>
 								</ul>
@@ -48,6 +49,7 @@
 						</div>
 					</div>
 			<?php endif; ?>
+			</div> <!-- /white-card-article -->
 		</div> <!-- /container -->
 	</section>
 

@@ -20,8 +20,8 @@ get_header(); ?>
 								
 								<h6 class="card-title mb-2">Si vous voulez contacter directement un membre de l’équipe : </h6>
 								<ul>
-									<li>Marjory Winkler, directrice, responsable projet et communication</li>
-									<li>Anne Dechambre, responsable de site</li>
+									<li><a href="mailto:marjory.winkler@ciao.ch">Marjory Winkler</a>, directrice, responsable projet et communication</li>
+									<li><a href="mailto:anne.dechambre@ciao.ch">Anne Dechambre</a>, responsable de site</li>
 								</ul>
 								<p class="card-text">Vous pouvez également nous contacter à l’aide du formulaire ci-dessous.</p>
 							</div>

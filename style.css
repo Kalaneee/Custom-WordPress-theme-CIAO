@@ -2,7 +2,7 @@
 Theme Name: Custom1
 Author: Valentin Kaelin
 Author URI: https://kalane.ch
-Description: Thème WordPress basé sur Bootstrap 3
+Description: Thème WordPress basé sur Bootstrap 4
 Version: 1.0
 Text Domain: Custom1
 */
@@ -206,6 +206,14 @@ iframe {
 
 input {
 	border-radius: 0px;
+}
+
+.wpcf7-form textarea{ 
+    height:75px;
+}
+
+.large {
+    clear: both;
 }
 
 
@@ -553,22 +561,21 @@ input {
 	font-weight: bold;
 }
 
+#contact .form-control {
+	border-radius: 0px;
+}
+
 #contact input[type="submit"] {
 	width: 100%;
 	height: 50px;
-	background-color: #323232;
-	/*border: 2px solid #f1c40f;*/
-	border: 2px solid #7CD0F5;
-	border-radius: 3px;
-	color: #fff
+	background-color: #7CD0F5;
+	color: #fff;
+	font-weight: bold;
 }
 
 #contact input[type="submit"]:hover {
-	/*background-color: #f1c40f;
-	border: 2px solid #323232;*/
-	transition: 0.4s;
-	/*color: #f1c40f;*/
-	color: #7CD0F5;
+	background-color: #00254F;
+	transition: 1s;
 }
 
 #contact input[type="submit"][value="Envoyer"] {
@@ -845,7 +852,72 @@ td {
     border-radius: 2px;
 }
 
+/* COMMANDER */
+#commandeCiao .img-wrap {
+	height: 150px;
+	overflow: hidden;
+}
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+
+#commandeCiao .large {
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+#commandeCiao .form-control {
+	border-radius: 0px;
+}
+
+#commandeCiao label {
+	font-weight: bold;
+}
+
+#commandeCiao input[type="submit"] {
+	width: 100%;
+	height: 50px;
+	background-color: #7CD0F5;
+	color: #fff;
+	font-weight: bold;
+}
+
+#commandeCiao input[type="submit"]:hover {
+	background-color: #00254F;
+	transition: 1s;
+}
+
+
+/* DEVENIR MEMBRE */
+
+#devenir-membre label {
+	font-weight: bold;
+}
+
+#devenir-membre .form-control {
+	border-radius: 0px;
+}
+
+#devenir-membre input[type="submit"] {
+	width: 100%;
+	height: 50px;
+	background-color: #7CD0F5;
+	color: #fff;
+	font-weight: bold;
+}
+
+#devenir-membre input[type="submit"]:hover {
+	background-color: #00254F;
+	transition: 1s;
+}
+
+#devenir-membre .form-check-input {
+	width: 13px;
+	margin-left: 100px;
+}
 
 
 

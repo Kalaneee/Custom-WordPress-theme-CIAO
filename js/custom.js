@@ -4,10 +4,10 @@ jQuery(document).ready(function($) {
 	// Animate the CIAO logo on hover
 	$('.logo img').on({
 	    mouseenter: function(){
-	        $(this).animate({width: '+=10px', height: '+=10px'}, 500);
+	        $(this).animate({width: '+=10px', height: '+=5px'}, 500);
 	    },
 	    mouseleave: function(){
-	        $(this).animate({width: '-=10px', height: '-=10px'}, 500);
+	        $(this).animate({width: '-=10px', height: '-=5px'}, 500);
 	    }
 	});
 
@@ -82,51 +82,15 @@ jQuery(document).ready(function($) {
 		// Math.max takes a variable number of arguments
 		// `apply` is equivalent to passing each height as an argument
 		var maxHeight = Math.max.apply(null, elementHeights);
-
-		// Set each height to the max height
 		$('.card').height(maxHeight);
+
+
+		// Give initial value 0 to all input
+		$('.card-body input').val(0);
+
 
 	} // fin page commande
 
-
-
-	 // Carousel
-	if (document.getElementById("slider-01")) {
-
-		var $myCarousel = $('.carousel');
-
-		// starts the carousel
-		$myCarousel.carousel({
-			interval: 5000
-		});
-
-
-		$myCarousel.on('slide.bs.carousel', function (e) {
-
-			var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
-			doAnimations($animatingElems);
-		});
-
-		var $firstAnimatedElement = $myCarousel.find(".carousel-item:first").find("[data-animation ^= 'animated']");
-		doAnimations($firstAnimatedElement); // animation au 1er chargement de la page
-
-		function doAnimations(elems) {
-			var animEndEv = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-
-			elems.each(function () {
-				var $this = $(this);
-				$animationType = $this.data('animation');
-				$this.addClass($animationType).one(animEndEv, function () {
-					$this.removeClass($animationType);
-				});
-
-
-			}); // fin du each
-
-		} // doAnimations
-
-
-	} // fin document.getElementById
 
 
 }); // fin du ready

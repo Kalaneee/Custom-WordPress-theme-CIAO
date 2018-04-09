@@ -3,7 +3,7 @@
 	<section id="list-articles">
 		<div class="container">
 			<div class="search-div-title white-card">
-				<h2>Résultats pour la recherche : <em><?= get_query_var('s'); ?></em></h2>
+				<h2>Résultats pour la recherche : <em class="search-tag"><?= get_query_var('s'); ?></em></h2>
 			</div>
 			<?php if (have_posts()): ?>
 					<?php while (have_posts()): the_post(); 

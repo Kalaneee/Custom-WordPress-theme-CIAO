@@ -24,7 +24,9 @@ $req_blog = new WP_Query($args_blog); ?>
 					<div class="white-card-front p-5">
 						<h2 class="news-title">Qui sommes-nous ?</h2>
 						<p>CIAO est une association qui met à disposition les compétences de professionnel·le·s reconnu·e·s dans leur domaine spécifique pour répondre aux besoins d’information et d’orientation des jeunes romands de 11-20 ans dans une multitude de domaines. A travers son site ciao.ch, elle offre une aide ponctuelle sans prise en charge thérapeutique et oriente, si nécessaire, vers une démarche plus approfondie auprès d’institutions actives au niveau local.</p>
-						<a class="more-link" href="<?= get_page_link(get_page_by_title(association)->ID); ?>"><b>En savoir plus »</b></a>
+						<div class="button-wrap" style="width: 100%;">
+							<button type="button" class="btn btn-primary more-news" style="max-width: 100%;"><a href="<?= get_page_link(get_page_by_title(association)->ID); ?>">En savoir plus »</a></button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -83,7 +85,7 @@ $req_blog = new WP_Query($args_blog); ?>
 					</div>
 					<div class="col-md-12 col-lg-6">
 						<div class="h-100 p-5 wrap-button">
-							<button type="button" class="btn btn-primary more-news"><a href="<?= get_page_link(get_page_by_title(association)->ID); ?>">En savoir plus sur l'association ?</a></button>
+							<button type="button" class="btn btn-primary more-news"><a href="http://ciao.ch">Visiter ciao.ch</a></button>
 						</div>
 					</div>
 				</div>

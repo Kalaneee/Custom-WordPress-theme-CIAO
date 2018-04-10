@@ -10,10 +10,7 @@ function vk_scripts() {
 
 	// Chargement des styles
 	wp_enqueue_style('vk_bootstrap-core', get_template_directory_uri() . '/css/bootstrap.min-4-0.css', array(), VK_VERSION, 'all');
-
-	wp_enqueue_style('vk_animate', get_template_directory_uri() . '/css/animate.css', array(), VK_VERSION, 'all');
-
-	wp_enqueue_style('vk_custom', get_template_directory_uri() . '/style.css', array('vk_bootstrap-core', 'vk_animate'), VK_VERSION, 'all');
+	wp_enqueue_style('vk_custom', get_template_directory_uri() . '/style.css', array('vk_bootstrap-core'), VK_VERSION, 'all');
 
 
 	// Chargement des fonts

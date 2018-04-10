@@ -1,24 +1,43 @@
 <?php get_header(); ?>
 
-	<section id="list-articles">
+	<section class="list-articles">
 		<div class="container">
 
 			<div class="title">Tous les articles
 				<img src="<?= get_template_directory_uri(); ?>/assets/blue-line.png" class="blue-line">
 			</div>
 
-			<?php if (have_posts()): ?>
-					<?php while (have_posts()): the_post(); 
-
-						get_template_part('article', 'content');
-						
+			<?php if (have_posts()): 
+				$links = array();
+			?>
+					<?php $index = 1;
+					while (have_posts()): the_post(); 
+						//get_template_part('article', 'content');
+						include(locate_template('article-content.php'));
+						array_push($links, $link);
+						$index++;
 					endwhile; ?>
 
 			
 			<?php else: ?>
 					<div class="row">
 						<div class="col-12">
-							<p>Aucun résultat</p>
+							<div class="white-card">
+								<h1>Désolé, rien n'a été trouvé!</h1>
+								<p>Nous ne pouvons trouver ce que vous recherchez. Utilisez éventuellement un autre mot clé pour votre recherche.</p>
+
+								<form role="search" method="get" id="searchform" class="searchform" action="http://xn--bourrdesavoir-fhb.ch/">
+									<div class="form-row">
+										<div class="col">
+											<input class="form-control" type="text" value="" name="s" id="s">
+										</div>
+										<div class="col">
+											<input class="btn btn-primary btn-search" type="submit" id="searchsubmit" value="Rechercher">
+										</div>
+									</div>
+								</form>
+
+							</div>
 						</div>
 					</div>
 			<?php endif; ?>
@@ -50,4 +69,23 @@
 		</div> <!-- /container -->
 	</section>
 
-<?php get_footer(); ?>
+	<script type="text/javascript">
+		
+		var links_js = <?= json_encode($links)?>;
+		links_js.forEach( function(element, index) {
+
+			var class_name = "." + (1 + index) + "-img";
+			var url = "url(" + element + ")";
+		
+			jQuery(class_name).css({
+				width: '100%',
+				height: '100%',
+				background: url,
+				"background-size" : "cover",
+				"background-position" : "center"
+			});
+			
+		});
+	</script>
+
+<?php get_footer(); ?>)

@@ -1,64 +1,15 @@
 <?php get_header(); ?>
 
 
-<section>
+<section id="error-404">
 	<div class="container">
-		<div class="jumbotron">
-			<h1>La page que vous avez demandée n'existe pas sur le site.</h1>
-			<img class="img-responsive alignecenter" src="<?= get_template_directory_uri(); ?>/assets/404-error.png" alt="image erreur 404">
+
+		<div class="title">Erreur 404
+			<img src="<?= get_template_directory_uri(); ?>/assets/blue-line.png" class="blue-line">
 		</div>
-
-		<div class="row">
-			
-			<?php $args_blog = array(
- 				'post_type'			=> 'post',
- 				'posts_per_page'	=> 6
-			);
-			$req_blog = new WP_Query($args_blog); ?>
-
-			<?php if($req_blog->have_posts()): ?>
-				<section id="blog-front">
-					<div class="container">
-						<div class="row">
-							<?php while($req_blog->have_posts()): $req_blog->the_post(); ?>
-								<div class="col-12 col-sm-6 d-flex">
-									<div class="card mb-3">
-										<div class="card-header">
-											<h2 class="text-center">
-												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-											</h2>
-										</div>
-										<div class="card-body">
-											<a href="<?php the_permalink(); ?>">
-												<?php the_post_thumbnail('medium', array('class' => 'img-fluid alignecenter')); ?>
-											</a>
-											<?php the_excerpt(); ?>
-										</div>
-										<div class="card-footer">
-											<p>
-												<?= 
-													vk_give_me_meta_01(
-														esc_attr(get_the_date('c')),
-														esc_html(get_the_date()),
-														get_the_category_list(', '),
-														get_the_tag_list('', ', ')
-													); ?>
-											</p>
-										</div>
-									</div>
-								</div>
-
-								<?php if($req_blog->current_post%2 == 1): ?>
-									<div class="clearfix"></div>
-								<?php endif; ?>
-							<?php endwhile; wp_reset_postdata(); ?>
-						</div> <!-- /row -->
-					</div>
-				</section>
-
-			<?php endif; ?>
-
-		</div> <!-- /row -->
+		<div class="alert alert-warning">
+			Désolé la page que vous avez demandée est introuvable, si vous pensez que c'est une erreur veuillez contacter un administrateur.
+		</div>
 
 	</div> <!-- /container -->
 </section>

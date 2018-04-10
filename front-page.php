@@ -27,6 +27,11 @@ $req_blog = new WP_Query($args_blog); ?>
 						<div class="button-wrap" style="width: 100%;">
 							<button type="button" class="btn btn-primary more-news" style="max-width: 100%;"><a href="<?= get_page_link(get_page_by_title(association)->ID); ?>">En savoir plus »</a></button>
 						</div>
+
+						<div class="contener" style="">
+  							<div class="ed"></div>
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -96,37 +101,3 @@ $req_blog = new WP_Query($args_blog); ?>
 	<?php endif; ?>
 
 <?php get_footer(); ?>
-
-
-
-<?php /*
-<div class="col-12 col-sm-6 d-flex mb-3">
-
-
-								
-								<div class="card">
-									<div class="card-header">
-										<h2 class="text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-									</div>
-									<div class="card-body">
-										<a href="<?php the_permalink(); ?>">
-
-											<img src="<?= get_template_directory_uri(); ?>/assets/tmp/img-<?= $counter; ?>.jpg" class="img-fluid alignecenter">
-											
-
-											<?php //the_post_thumbnail('medium', array('class' => 'img-fluid alignecenter')); ?>
-										</a>
-										<?php the_excerpt(); ?>
-									</div>
-									<div class="card-footer">
-										<p>
-											<?= vk_give_me_meta_01(
-													esc_attr(get_the_date('c')),
-													esc_html(get_the_date()),
-													get_the_category_list(', '),
-													get_the_tag_list('', ', ')
-												); ?>
-										</p>
-									</div>
-								</div>
-							</div>

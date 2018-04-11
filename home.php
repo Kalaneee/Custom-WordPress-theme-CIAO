@@ -72,20 +72,24 @@
 	<script type="text/javascript">
 		
 		var links_js = <?= json_encode($links)?>;
-		links_js.forEach( function(element, index) {
-
-			var class_name = "." + (1 + index) + "-img";
-			var url = "url(" + element + ")";
-		
-			jQuery(class_name).css({
-				width: '100%',
-				height: '100%',
-				background: url,
-				"background-size" : "cover",
-				"background-position" : "center"
-			});
+		if (links_js != null) {
 			
-		});
+			links_js.forEach( function(element, index) {
+
+				var class_name = "." + (1 + index) + "-img";
+				var url = "url(" + element + ")";
+			
+				jQuery(class_name).css({
+					width: '100%',
+					height: '100%',
+					background: url,
+					"background-size" : "cover",
+					"background-position" : "center"
+				});
+			
+			});
+		}
+		
 	</script>
 
 <?php get_footer(); ?>)

@@ -34,6 +34,7 @@ jQuery(document).ready(function($) {
 	 	'background-color' : 'transparent',
 	 	'border-color' : 'transparent'
 	 });
+	 $('.btn-prev-art').addClass('hide-after');
 	}
 
 	if ( !($('button.btn-next-art a').length) ) {
@@ -41,6 +42,7 @@ jQuery(document).ready(function($) {
 	 	'background-color' : 'transparent',
 	 	'border-color' : 'transparent'
 	 });
+	 $('.btn-next-art').addClass('hide-after');
 	}
 
 	// Change the text of the pagination on mobile
@@ -90,7 +92,6 @@ jQuery(document).ready(function($) {
 
 
 	} // fin page commande
-
 
 
 }); // fin du ready

@@ -58,7 +58,7 @@ get_header(); ?>
 		    </div>
 		    <div class="card-footer">
 		      <small class="text-muted">Téléchargement : </small>
-		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2016.pdf" target="_blank">
+		      <a href="<?= get_template_directory_uri(); ?>/./assets/docs/RapportAnnuelCIAO_2016.pdf" target="_blank">
 		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
 		      </a>
 		    </div>
@@ -78,7 +78,7 @@ get_header(); ?>
 		    </div>
 		    <div class="card-footer">
 		      <small class="text-muted">Téléchargement : </small>
-		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/EVALUATION_SiteCiao_GRSA_RdS249.pdf" target="_blank">
+		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportDActivités2015.pdf" target="_blank">
 		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
 		      </a>
 		    </div>
@@ -93,7 +93,7 @@ get_header(); ?>
 		    </div>
 		    <div class="card-footer">
 		      <small class="text-muted">Téléchargement : </small>
-		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/STATUTS-CIAO.pdf" target="_blank">
+		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/StatutsCIAOAG2016.pdf" target="_blank">
 		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
 		      </a>
 		    </div>
@@ -108,7 +108,7 @@ get_header(); ?>
 		    </div>
 		    <div class="card-footer">
 		      <small class="text-muted">Téléchargement : </small>
-		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/Charte-ethique_CIAO.pdf" target="_blank">
+		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/Charte éthique de CIAO version 2016.pdf" target="_blank">
 		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
 		      </a>
 		    </div>

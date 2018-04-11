@@ -101,7 +101,7 @@ iframe {
 	border-radius: 0px;
 }
 
-.btn a {
+.btn a, .btn span {
 	color: #fff;
 	text-decoration: none;
 	position: relative;
@@ -118,7 +118,6 @@ iframe {
 	background-color: #00254F;
 	transition: 1s;
 }*/
-
 
 .btn-primary:after {
 	position: absolute;
@@ -137,9 +136,10 @@ iframe {
 	opacity: 1
 }
 
-
-
-
+.btn-primary.hide-after:hover:after {
+	opacity: 0;
+	cursor: default;
+}
 
 .title {
 	position: relative;
@@ -243,6 +243,29 @@ input {
 	.p-5 {
 		padding: 1rem !important;
 	}
+}
+
+::selection {
+  background: #7CD0F5;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #7CD0F5;
+  color: #ffffff;
+}
+
+::-webkit-selection {
+  background: #7CD0F5;
+  color: #ffffff;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(0, 37, 79, 0.5);
+  outline: 0;
+  box-shadow: none;
 }
 
 
@@ -365,7 +388,7 @@ input {
 	height: 48px;
 	line-height: 48px;
 	padding: 0 15px;
-	background-color: #2A242C;
+	background-color: #2e2630;
 	text-transform: uppercase;
 	color: #fff;
 }
@@ -459,6 +482,16 @@ input {
 	margin-bottom: 25px;
 }
 
+#front-page .news-title a {
+	color: #000;
+	text-decoration: none;
+}
+
+#front-page .news-title a:hover {
+	color: #00254F;
+	transition: 0.4s;
+}
+
 @media (max-width: 991px) {
 	#front-page .img-news-1, #front-page .row .img-maquette-1 {
 		height: 370px;
@@ -521,7 +554,7 @@ input {
 /* FOOTER */
 .footer {
     margin-top: 15px;
-    background: #323232;
+    background: #2e2630;
     border-top: 5px solid #7CD0F5;
     color: #fff;
 }
@@ -537,7 +570,7 @@ input {
 }
 
 .footer a:hover {
-	color: rgba(255,255,255,0.8);
+	color: #7CD0F5;
 }
 
 @media (max-width: 504px) {
@@ -774,7 +807,8 @@ ul.vk-pager {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03), 0 3px 1px -2px rgba(0, 0, 0, 0.03), 0 1px 5px 0 rgba(0, 0, 0, 0.03);
     background: #fff;
     border-radius: 2px;
-    overflow: scroll;
+    /*overflow: scroll;*/
+    overflow: auto;
 }
 
 .aligncenter, img.aligncenter {
@@ -978,7 +1012,7 @@ td {
 
 /* PAGE 404 */
 #error-404 .white-card {
-	/*background-color: #fff3cd !important;
+	/*background-color: #fff3cd !important;*/
 }
 
 
@@ -987,3 +1021,5 @@ Palette :
 #7CD0F5
 #00254F
 */
+
+

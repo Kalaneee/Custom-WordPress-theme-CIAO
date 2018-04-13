@@ -7,7 +7,7 @@
 		<meta name="description" content="Page du blog du site regroupant tous les articles postés."/>
 	<?php endif; ?>
 	<?php if(is_front_page()): ?>
-		<meta name="description" content="Page statique d'accueil et de présentation du site."/>
+		<meta name="description" content="Bienvenue sur le site de l'Association romande CIAO."/>
 	<?php elseif(is_page()): ?>
 		<meta name="description" content="Le site présente un contenu de type page."/>
 	<?php endif; ?>	
@@ -103,7 +103,7 @@
         </button>
       </div>
       <div class="modal-body">
-      	<form role="search" method="get" id="searchform" class="searchform" action="http://xn--bourrdesavoir-fhb.ch/">
+      	<form role="search" method="get" id="searchform" class="searchform" action="http://monstress.ch/">
 				<div class="form-row">
 					<div class="col">
 						<input class="form-control" type="text" value="" name="s" id="s">

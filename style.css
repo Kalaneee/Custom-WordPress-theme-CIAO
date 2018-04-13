@@ -372,7 +372,9 @@ input {
 }
 
 .header {
-	background: url(assets/blur-back.jpg);
+	background: url(assets/blur2.png);
+	background-size: cover;
+	background-position: center;
 	height: 280px;
 	position: relative;
 }

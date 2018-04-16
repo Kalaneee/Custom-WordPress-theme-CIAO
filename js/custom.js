@@ -63,9 +63,8 @@ jQuery(document).ready(function($) {
 		});
 
 		$("input[type=checkbox]").each(function(index) {
-			console.log(index);
 			
-			if (!($(this).hasClass("form-check-inputl")) ) {
+			if (!($(this).hasClass("form-check-input")) ) {
 				$(this).addClass('form-check-input');
 				$(this).removeClass('form-control');
 			}

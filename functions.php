@@ -148,7 +148,7 @@ function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
 //=====================================================
 
 function vk_excerpt_more($more) {
-	return '<p><a class="more-link" href="' . get_permalink() . '">' . ' <b>Lire la suite »</b>' . '</a></p>';
+	return '...<p><a class="more-link" href="' . get_permalink() . '">' . ' <b>Lire la suite »</b>' . '</a></p>';
 }
 add_filter('excerpt_more', 'vk_excerpt_more');
 

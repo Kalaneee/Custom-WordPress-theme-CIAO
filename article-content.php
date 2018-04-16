@@ -4,7 +4,7 @@
 			<div class="img-news-list <?= $index . '-img'?>">
 
 				<?php
-				if ($thumbnail_html = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail')) :
+				if ($thumbnail_html = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large')) :
 					$thumbnail_src = $thumbnail_html['0']; 
 					$link = $thumbnail_src;
 				else:

@@ -34,7 +34,7 @@
 	<div class="header">
 		<div class="top">
 			<div class="n-container">
-				<a href="http://bourrédesavoir.ch" class="slogan">Association <b>CIAO</b></a>
+				<a href="http://monstress.ch/" class="slogan">Association <b>CIAO</b></a>
 				<div style="float: right;">
 					<a href="https://twitter.com/associationciao" target="_blank">
 						<i class="fa fa-twitter"></i>
@@ -56,7 +56,7 @@
 		</div>
 		<div class="n-container">
 			<div class="logo">
-				<a href="http://bourrédesavoir.ch"><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
+				<a href="http://monstress.ch/"><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
 			</div>
 		</div>
 	</div>

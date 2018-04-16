@@ -14,6 +14,23 @@ get_header(); ?>
 
 		<!-- First row -->
 		<div class="card-deck">
+			<div class="card">
+		  	<div class="img-wrap">
+		  		<a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2017.pdf" target="_blank">
+		    		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/RA-2017-Couverture.png" alt="Card image cap">
+		      	</a>
+		  	</div>
+		    <div class="card-body">
+		      <h5 class="card-title">Rapport annuel 2017</h5>
+		      <p class="card-text"></p>
+		    </div>
+		    <div class="card-footer">
+		      <small class="text-muted">Téléchargement : </small>
+		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2017.pdf" target="_blank">
+		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
+		      </a>
+		    </div>
+		  </div>
 		  <div class="card">
 		  	<div class="img-wrap">
 		  		<a href="<?= get_template_directory_uri(); ?>/assets/docs/EVALUATION_SiteCiao_GRSA_RdS249.pdf" target="_blank">
@@ -48,7 +65,11 @@ get_header(); ?>
 		      </a>
 		    </div>
 		  </div>
-		  <div class="card">
+		</div>
+
+		<!-- Second row -->
+		<div class="card-deck">
+		 <div class="card">
 		  	<div class="img-wrap">
 		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/3.jpeg" alt="Card image cap">
 		  	</div>
@@ -64,10 +85,6 @@ get_header(); ?>
 		    </div>
 
 		  </div>
-		</div>
-
-		<!-- Second row -->
-		<div class="card-deck">
 		  <div class="card">
 		  	<div class="img-wrap">
 		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/4.png" alt="Card image cap">
@@ -98,7 +115,12 @@ get_header(); ?>
 		      </a>
 		    </div>
 		  </div>
-		  <div class="card">
+		</div>
+
+
+		<!-- Third row -->
+		<div class="card-deck">
+			<div class="card">
 		  	<div class="img-wrap">
 		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/6.png" alt="Card image cap">
 		  	</div>
@@ -114,7 +136,14 @@ get_header(); ?>
 		    </div>
 
 		  </div>
-		</div>
+		  <div class="card HIDE-EMTPY-CARD">
+		  	
+		  </div>
+		  <div class="card HIDE-EMTPY-CARD">
+		  	
+		  </div>
+
+		</div> <!-- /third row -->
 
 
 	</div>

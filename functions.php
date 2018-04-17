@@ -178,3 +178,22 @@ function add_get_val() {
 }
 
 add_action('init','add_get_val');
+
+
+
+
+//=====================================================
+// 	Méthode qui renvoie le lien de l'img d'un article
+//=====================================================
+
+function get_img_article() {
+
+	if ($thumbnail_html = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large')) {
+		$thumbnail_src = $thumbnail_html['0'];
+		$link = $thumbnail_src;
+	} else {
+		$link = get_template_directory_uri() . '/assets/articles-sans-img.png'; 
+	}
+
+	return $link;					
+}

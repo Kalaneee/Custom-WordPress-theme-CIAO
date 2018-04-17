@@ -56,7 +56,7 @@
 		</div>
 		<div class="n-container">
 			<div class="logo">
-				<a href="http://monstress.ch/"><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
+				<a href="http://ciao.ch/"><img src="<?= get_template_directory_uri(); ?>/assets/logo.png"></a>
 			</div>
 		</div>
 	</div>
@@ -94,7 +94,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog mt-5" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Rechercher</h5>

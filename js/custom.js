@@ -52,18 +52,18 @@ jQuery(document).ready(function($) {
 	 	$('.next.page-numbers').text('»');
 	 	$('.pagination-wrapper').css('width', '100%').addClass('d-flex').addClass('justify-content-around');
 	 }
-	  
+
 	// Give bootstrap class to input form - Commande page, Contact & devenir membre
 	if (document.getElementById("commandeCiao") || document.getElementById("contact") || document.getElementById("devenir-membre")) {
 		$("input, textarea, select").each(function(index) {
-			
+
 			if (!($(this).hasClass("form-control")) ) {
 				$(this).addClass('form-control');
 			}
 		});
 
 		$("input[type=checkbox]").each(function(index) {
-			
+
 			if (!($(this).hasClass("form-check-input")) ) {
 				$(this).addClass('form-check-input');
 				$(this).removeClass('form-control');

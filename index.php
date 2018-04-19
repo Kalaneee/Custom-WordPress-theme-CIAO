@@ -5,10 +5,10 @@
 			<div class="search-div-title white-card">
 				<h2>Résultats pour la recherche : <em class="search-tag"><?= get_query_var('s'); ?></em></h2>
 			</div>
-			<?php if (have_posts()): 
-				$links = array(); 
-				$index = 1; 
-					while (have_posts()): the_post(); 
+			<?php if (have_posts()):
+				$links = array();
+				$index = 1;
+					while (have_posts()): the_post();
 
 						//get_template_part('article', 'content');
 						include(locate_template('article-content.php'));
@@ -17,7 +17,7 @@
 
 					endwhile; ?>
 
-			
+
 			<?php else: ?>
 					<div class="row">
 						<div class="col-12">
@@ -40,12 +40,12 @@
 						</div>
 					</div>
 			<?php endif; ?>
-			
-			
 
 
 
-						
+
+
+
 					<div class="row">
 				<?php global $wp_query;
 				$big = 999999999; // need an unlikely integer
@@ -69,20 +69,20 @@
 			</div>
 
 
-			
+
 		</div> <!-- /container -->
 	</section>
 
 	<script type="text/javascript">
-		
+
 		var links_js = <?= json_encode($links)?>;
 		if (links_js != null) {
-			
+
 			links_js.forEach( function(element, index) {
 
 				var class_name = "." + (1 + index) + "-img";
 				var url = "url(" + element + ")";
-			
+
 				jQuery(class_name).css({
 					width: '100%',
 					height: '100%',
@@ -90,10 +90,10 @@
 					"background-size" : "cover",
 					"background-position" : "center"
 				});
-			
+
 			});
 		}
-		
+
 	</script>
 
 <?php get_footer(); ?>

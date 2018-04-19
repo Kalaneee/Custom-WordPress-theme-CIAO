@@ -1,4 +1,4 @@
-<?php get_header(); 
+<?php get_header();
 
 $args_blog = array(
 	'post_type' => 'post',
@@ -23,21 +23,16 @@ $req_blog = new WP_Query($args_blog); ?>
 						<h2 class="news-title">Qui sommes-nous ?</h2>
 						<p>CIAO est une association qui met à disposition les compétences de professionnel·le·s reconnu·e·s dans leur domaine spécifique pour répondre aux besoins d’information et d’orientation des jeunes romands de 11-20 ans dans une multitude de domaines. A travers son site ciao.ch, elle offre une aide ponctuelle sans prise en charge thérapeutique et oriente, si nécessaire, vers une démarche plus approfondie auprès d’institutions actives au niveau local.</p>
 						<div class="button-wrap" style="width: 100%;">
-							<a href="<?= get_page_link(get_page_by_title(association)->ID); ?>" class="btn btn-primary more-news" style="max-width: 100%;">
+							<a href="<?= get_page_link(get_page_by_title('association')->ID); ?>" class="btn btn-primary more-news" style="max-width: 100%;">
 								<span class="" style="line-height: 43px; vertical-align: middle;">En savoir plus »</span>
 							</a>
 						</div>
-
-						<div class="contener" style="">
-  							<div class="ed"></div>
-						</div>
-						
 					</div>
 				</div>
 			</div>
 
-			<?php 
-			if($req_blog->have_posts()): 
+			<?php
+			if($req_blog->have_posts()):
 				$links = array();
 			?>
 			<div class="title">
@@ -50,7 +45,7 @@ $req_blog = new WP_Query($args_blog); ?>
 						?>
 							<div class="col-md-12 col-lg-6 avoid-right-pad mb-4">
 								<div class="img-news-1 <?= $counter . '-img'?>"></div>
-								
+
 								<?php // get img link
 								$link = get_img_article();
 								array_push($links, $link);
@@ -86,7 +81,7 @@ $req_blog = new WP_Query($args_blog); ?>
 						<?php
 					}
 					?>
-					
+
 				<?php $counter++; endwhile; wp_reset_postdata(); ?>
 			</div> <!-- /row -->
 
@@ -95,7 +90,7 @@ $req_blog = new WP_Query($args_blog); ?>
 
 					<div class="col-md-12 col-lg-6 border-resp">
 						<div class="h-100 p-5 wrap-button">
-							<a href="<?= get_page_link(get_page_by_title(articles)->ID); ?>" class="btn btn-primary more-news" style="max-width: 100%;">
+							<a href="<?= get_page_link(get_page_by_title('articles')->ID); ?>" class="btn btn-primary more-news" style="max-width: 100%;">
 								<span class="" style="line-height: 43px; vertical-align: middle;">Voir plus d'articles</span>
 							</a>
 						</div>
@@ -110,17 +105,17 @@ $req_blog = new WP_Query($args_blog); ?>
 				</div>
 			</div>
 
-		</div>	 <!-- /container -->											
+		</div>	 <!-- /container -->
 	</section>
 	<?php endif; ?>
 
 
 
 	<script type="text/javascript">
-		
+
 		var links_js = <?= json_encode($links)?>;
 		if (links_js != null) {
-			
+
 			links_js.forEach( function(element, index) {
 
 				var class_name = "." + (1 + index) + "-img";
@@ -133,8 +128,6 @@ $req_blog = new WP_Query($args_blog); ?>
 			});
 		}
 
-
-
 		function add_class_img(height_val, class_name, url) {
 			jQuery(class_name).css({
 				width: '100%',
@@ -144,11 +137,11 @@ $req_blog = new WP_Query($args_blog); ?>
 				"background-position" : "center"
 			});
 		}
-		
+
 	</script>
 
 	<!--<script type="text/javascript" data-my_var_1=<?= json_encode($links)?> src="<?= get_template_directory_uri(); ?>/js/add-class-img-articles.js"></script>-->
 
-	
+
 
 <?php get_footer(); ?>

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+
 	<meta charset="<?php bloginfo('charset'); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="author" content="Valentin Kaelin">
+	<meta name="keywords" content="Association, romande, ciao">
+
+	<!-- Description -->
 	<?php if(is_home()): ?>
-		<meta name="description" content="Page du blog du site regroupant tous les articles postés."/>
+		<meta name="description" content="Page regroupant toutes les actualités de l'Association."/>
 	<?php endif; ?>
 	<?php if(is_front_page()): ?>
 		<meta name="description" content="Bienvenue sur le site de l'Association romande CIAO."/>
 	<?php elseif(is_page()): ?>
 		<meta name="description" content="Le site présente un contenu de type page."/>
-	<?php endif; ?>	
+	<?php endif; ?>
 
 	<?php if(is_category()): ?>
 		<meta name="description" content="Liste des articles pour la catégorie <?= single_cat_title('', false) ?>."/>
@@ -19,6 +24,7 @@
 		<meta name="description" content="Liste des articles reliés avec l'étiquette [<?= single_tag_title('', false) ?>]."/>
 	<?php endif; ?>
 
+	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -71,7 +77,7 @@
 		      <span class="navbar-toggler-icon"></span>
 		    </button>
 
-		    <?php 
+		    <?php
 		      wp_nav_menu(array(
 		        'menu'            => 'top-menu',
 		        'theme_location'  => 'primary',
@@ -82,7 +88,7 @@
 		        'menu_class'      => 'nav navbar-nav ml-auto',
 		        'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
 		        'walker'          => new wp_bootstrap_navwalker()
-		        )); 
+		        ));
 		    ?>
 
 		  </div> <!-- /container -->

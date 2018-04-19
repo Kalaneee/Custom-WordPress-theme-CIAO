@@ -1,15 +1,15 @@
 /*
-Theme Name: Custom1
+Theme Name: CiaoCustom
 Author: Valentin Kaelin
 Author URI: https://kalane.ch
 Description: Thème WordPress basé sur Bootstrap 4
 Version: 1.0
-Text Domain: Custom1
+Text Domain: CiaoCustom
 */
 
 
 
-/* 
+/*
 Palette :
 #7CD0F5
 #00254F
@@ -231,7 +231,7 @@ input {
 	border-radius: 0px;
 }
 
-.wpcf7-form textarea{ 
+.wpcf7-form textarea{
     height:75px;
 }
 
@@ -514,7 +514,7 @@ input {
 }
 
 #front-page .sec-third-news {
-	overflow: hidden; 
+	overflow: hidden;
 }
 
 #front-page .news-content {
@@ -936,8 +936,8 @@ td {
 	overflow: hidden;
 }
 
-#commander input[type=number]::-webkit-inner-spin-button, 
-#commander input[type=number]::-webkit-outer-spin-button {  
+#commander input[type=number]::-webkit-inner-spin-button,
+#commander input[type=number]::-webkit-outer-spin-button {
    opacity: 1;
 }
 
@@ -1024,10 +1024,8 @@ td {
 }
 
 
-/* 
+/*
 Palette :
 #7CD0F5
 #00254F
 */
-
-

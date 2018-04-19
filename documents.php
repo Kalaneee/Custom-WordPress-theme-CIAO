@@ -16,7 +16,7 @@ get_header(); ?>
 		<div class="card-deck">
 			<div class="card">
 		  	<div class="img-wrap">
-		  		<a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2017.pdf" target="_blank">
+		  		<a href="<?= get_template_directory_uri(); ?>/assets/docs/Rapport_annuel_2017.pdf" target="_blank">
 		    		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/RA-2017-Couverture.png" alt="Card image cap">
 		      	</a>
 		  	</div>
@@ -137,10 +137,10 @@ get_header(); ?>
 
 		  </div>
 		  <div class="card HIDE-EMTPY-CARD">
-		  	
+
 		  </div>
 		  <div class="card HIDE-EMTPY-CARD">
-		  	
+
 		  </div>
 
 		</div> <!-- /third row -->

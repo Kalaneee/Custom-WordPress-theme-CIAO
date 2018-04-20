@@ -890,6 +890,12 @@ td {
     border-radius: 2px;
 }
 
+@media (max-width: 844px) {
+	#newsletter-footer form {
+		width: 100%;
+	}
+}
+
 
 
 /* NEWSLETTER PAGE */

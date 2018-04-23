@@ -40,7 +40,7 @@
 	<div class="header">
 		<div class="top">
 			<div class="n-container">
-				<a href="http://monstress.ch/" class="slogan">Association <b>CIAO</b></a>
+				<a href="https://associationciao.ch/" class="slogan">Association <b>CIAO</b></a>
 				<div style="float: right;">
 					<a href="https://twitter.com/associationciao" target="_blank">
 						<i class="fa fa-twitter"></i>
@@ -109,7 +109,7 @@
         </button>
       </div>
       <div class="modal-body">
-      	<form role="search" method="get" id="searchform" class="searchform" action="http://monstress.ch/">
+      	<form role="search" method="get" id="searchform" class="searchform" action="https://associationciao.ch/">
 				<div class="form-row">
 					<div class="col">
 						<input class="form-control" type="text" value="" name="s" id="s">

@@ -26,7 +26,7 @@ get_header(); ?>
 		    </div>
 		    <div class="card-footer">
 		      <small class="text-muted">Téléchargement : </small>
-		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2017.pdf" target="_blank">
+		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/Rapport_annuel_2017.pdf" target="_blank">
 		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
 		      </a>
 		    </div>
@@ -50,7 +50,7 @@ get_header(); ?>
 		  </div>
 		  <div class="card">
 		  	<div class="img-wrap">
-		  		<a href="<?= get_template_directory_uri(); ?>/assets/docs/EVALUATION_SiteCiao_GRSA_RdS249.pdf" target="_blank">
+		  		<a href="<?= get_template_directory_uri(); ?>/assets/docs/Evaluation-ciao.ch_Lessentiel-en-bref.pdf" target="_blank">
 		  			<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/2.png" alt="Card image cap">
 		  		</a>
 		  	</div>
@@ -71,7 +71,9 @@ get_header(); ?>
 		<div class="card-deck">
 		 <div class="card">
 		  	<div class="img-wrap">
-		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/3.jpeg" alt="Card image cap">
+					<a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2016.pdf" target="_blank">
+						<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/3.jpeg" alt="Card image cap">
+					</a>
 		  	</div>
 		    <div class="card-body">
 		      <h5 class="card-title">Rapport annuel 2016</h5>
@@ -79,7 +81,7 @@ get_header(); ?>
 		    </div>
 		    <div class="card-footer">
 		      <small class="text-muted">Téléchargement : </small>
-		      <a href="<?= get_template_directory_uri(); ?>/./assets/docs/RapportAnnuelCIAO_2016.pdf" target="_blank">
+		      <a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportAnnuelCIAO_2016.pdf" target="_blank">
 		      	<small class="text-muted right"><i class="zmdi zmdi-download"></i></small>
 		      </a>
 		    </div>
@@ -87,7 +89,9 @@ get_header(); ?>
 		  </div>
 		  <div class="card">
 		  	<div class="img-wrap">
-		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/4.png" alt="Card image cap">
+					<a href="<?= get_template_directory_uri(); ?>/assets/docs/RapportDActivités2015.pdf" target="_blank">
+						<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/4.png" alt="Card image cap">
+					</a>
 		  	</div>
 		    <div class="card-body">
 		      <h5 class="card-title">Rapport annuel 2015</h5>
@@ -102,7 +106,9 @@ get_header(); ?>
 		  </div>
 		  <div class="card">
 		  	<div class="img-wrap">
-		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/5.jpg" alt="Card image cap">
+					<a href="<?= get_template_directory_uri(); ?>/assets/docs/StatutsCIAOAG2016.pdf" target="_blank">
+						<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/5.jpg" alt="Card image cap">
+					</a>
 		  	</div>
 		    <div class="card-body">
 		      <h5 class="card-title">Status de l'association romande CIAO</h5>
@@ -122,7 +128,9 @@ get_header(); ?>
 		<div class="card-deck">
 			<div class="card">
 		  	<div class="img-wrap">
-		  		<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/6.png" alt="Card image cap">
+					<a href="<?= get_template_directory_uri(); ?>/assets/docs/Charte éthique de CIAO version 2016.pdf" target="_blank">
+						<img class="card-img-top" src="<?= get_template_directory_uri(); ?>/assets/img-docs/6.png" alt="Card image cap">
+					</a>
 		  	</div>
 		    <div class="card-body">
 		      <h5 class="card-title">Charte éthique de l'association</h5>

@@ -7,18 +7,18 @@
 				<img src="<?= get_template_directory_uri(); ?>/assets/blue-line.png" class="blue-line">
 			</div>
 
-			<?php if (have_posts()): 
+			<?php if (have_posts()):
 				$links = array();
 			?>
 					<?php $index = 1;
-					while (have_posts()): the_post(); 
+					while (have_posts()): the_post();
 						//get_template_part('article', 'content');
 						include(locate_template('article-content.php'));
 						array_push($links, $link);
 						$index++;
 					endwhile; ?>
 
-			
+
 			<?php else: ?>
 					<div class="row">
 						<div class="col-12">
@@ -26,7 +26,7 @@
 								<h1>Désolé, rien n'a été trouvé!</h1>
 								<p>Nous ne pouvons trouver ce que vous recherchez. Utilisez éventuellement un autre mot clé pour votre recherche.</p>
 
-								<form role="search" method="get" id="searchform" class="searchform" action="http://xn--bourrdesavoir-fhb.ch/">
+								<form role="search" method="get" id="searchform" class="searchform" action="https://associationciao.ch/">
 									<div class="form-row">
 										<div class="col">
 											<input class="form-control" type="text" value="" name="s" id="s">
@@ -70,15 +70,15 @@
 	</section>
 
 	<script type="text/javascript">
-		
+
 		var links_js = <?= json_encode($links)?>;
 		if (links_js != null) {
-			
+
 			links_js.forEach( function(element, index) {
 
 				var class_name = "." + (1 + index) + "-img";
 				var url = "url(" + element + ")";
-			
+
 				jQuery(class_name).css({
 					width: '100%',
 					height: '100%',
@@ -86,10 +86,10 @@
 					"background-size" : "cover",
 					"background-position" : "center"
 				});
-			
+
 			});
 		}
-		
+
 	</script>
 
 <?php get_footer(); ?>)

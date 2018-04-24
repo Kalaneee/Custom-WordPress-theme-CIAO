@@ -11,6 +11,13 @@ jQuery(document).ready(function($) {
 	    }
 	});
 
+	// Color the dropdown if active
+	var listDropdown = ["ciao.ch", "Documents", "Devenir membre"];
+	var elemDropdownActive = $('.current-menu-item > a').attr("title");
+	if (listDropdown.indexOf(elemDropdownActive) != -1) {
+		$('.dropdown-toggle.nav-link').css('color', '#7CD0F5');
+	}
+
 	// Add slideDown animation to Bootstrap dropdown when expanding.
 	$('.dropdown').on('show.bs.dropdown', function() {
 		$(this).find('.dropdown-menu').first().stop(true, true).slideDown();

@@ -25,7 +25,7 @@
 								<h1>Désolé, rien n'a été trouvé!</h1>
 								<p>Nous ne pouvons trouver ce que vous recherchez. Utilisez éventuellement un autre mot clé pour votre recherche.</p>
 
-								<form role="search" method="get" id="searchform" class="searchform" action="http://xn--bourrdesavoir-fhb.ch/">
+								<form role="search" method="get" id="searchform" class="searchform" action="https://associationciao.ch/">
 									<div class="form-row">
 										<div class="col">
 											<input class="form-control" type="text" value="" name="s" id="s">

@@ -136,7 +136,7 @@ function vk_give_me_meta_01($date1, $date2, $cat, $tags = NULL) {
 	$chaine .= '">';
 	$chaine	.= $date2;
 	$chaine .= '</time>';
-	
+
 	return $chaine;
 }
 
@@ -172,9 +172,9 @@ function wp_upload_dir_url() {
 // 		Ajout méthode pour get les url safe
 //=====================================================
 
-function add_get_val() { 
-    global $wp; 
-    $wp->add_query_var('s'); 
+function add_get_val() {
+    global $wp;
+    $wp->add_query_var('s');
 }
 
 add_action('init','add_get_val');
@@ -192,8 +192,48 @@ function get_img_article() {
 		$thumbnail_src = $thumbnail_html['0'];
 		$link = $thumbnail_src;
 	} else {
-		$link = get_template_directory_uri() . '/assets/articles-sans-img.png'; 
+		$link = get_template_directory_uri() . '/assets/articles-sans-img.png';
 	}
 
-	return $link;					
+	return $link;
 }
+
+
+
+
+//=====================================================
+// 		Enlever le message JQMIGRATE de la console
+//=====================================================
+
+// Attention a comment ce code si vous voulez debug
+// du JS dans la console
+
+// silencer script
+function jquery_migrate_silencer() {
+    // create function copy
+    $silencer = '<script>window.console.logger = window.console.log; ';
+    // modify original function to filter and use function copy
+    $silencer .= 'window.console.log = function(tolog) {';
+    // bug out if empty to prevent error
+    $silencer .= 'if (tolog == null) {return;} ';
+    // filter messages containing string
+    $silencer .= 'if (tolog.indexOf("Migrate is installed") == -1) {';
+    $silencer .= 'console.logger(tolog);} ';
+    $silencer .= '}</script>';
+    return $silencer;
+}
+
+// for the frontend, use script_loader_tag filter
+add_filter('script_loader_tag','jquery_migrate_load_silencer', 10, 2);
+function jquery_migrate_load_silencer($tag, $handle) {
+    if ($handle == 'jquery-migrate') {
+        $silencer = jquery_migrate_silencer();
+        // prepend to jquery migrate loading
+        $tag = $silencer.$tag;
+    }
+    return $tag;
+}
+
+// for the admin, hook to admin_print_scripts
+add_action('admin_print_scripts','jquery_migrate_echo_silencer');
+function jquery_migrate_echo_silencer() {echo jquery_migrate_silencer();}

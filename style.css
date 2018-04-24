@@ -57,6 +57,13 @@ body {
     padding: 0 10px;
 }
 
+.n-container-small {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .bg-dark {
     background-color: #00254F !important;
 }
@@ -341,7 +348,7 @@ input {
 	z-index: 10000000;
 }
 
-.navbar .current-menu-item a {
+.navbar .current-menu-item > a {
 	color: #7CD0F5 !important;
 }
 
@@ -359,7 +366,7 @@ input {
 	background-color: #00254F;
 }
 
-.navbar .current-menu-item .dropdown-item {
+.navbar .current-menu-item > .dropdown-item {
 	background-color: #00254F;
 }
 
@@ -378,7 +385,7 @@ input {
 }
 
 .header {
-	background: url(assets/blur2.png);
+	background: url(assets/header-bg.png);
 	background-size: cover;
 	background-position: center;
 	height: 280px;

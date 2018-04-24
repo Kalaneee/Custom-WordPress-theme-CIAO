@@ -2,27 +2,11 @@
 <html <?php language_attributes(); ?>>
 <head>
 
+	<!-- General -->
 	<meta charset="<?php bloginfo('charset'); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta name="author" content="Valentin Kaelin">
 	<meta name="keywords" content="Association, romande, ciao">
-
-	<!-- Description -->
-	<?php if(is_home()): ?>
-		<meta name="description" content="Page regroupant toutes les actualités de l'Association."/>
-	<?php endif; ?>
-	<?php if(is_front_page()): ?>
-		<meta name="description" content="Bienvenue sur le site de l'Association romande CIAO."/>
-	<?php elseif(is_page()): ?>
-		<meta name="description" content="Le site présente un contenu de type page."/>
-	<?php endif; ?>
-
-	<?php if(is_category()): ?>
-		<meta name="description" content="Liste des articles pour la catégorie <?= single_cat_title('', false) ?>."/>
-	<?php endif; ?>
-	<?php if(is_tag()): ?>
-		<meta name="description" content="Liste des articles reliés avec l'étiquette [<?= single_tag_title('', false) ?>]."/>
-	<?php endif; ?>
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -54,7 +38,7 @@
 					<a href="http://www.ciao.ch/f/" target="_blank">
 						<i class="fa fa-globe"></i>
 					</a>
-					<a href="#" data-toggle="modal" data-target="#exampleModal" class="clickable">
+					<a href="#" data-toggle="modal" data-target="#modalSearch" class="clickable">
 						<i class="fa fa-search"></i>
 					</a>
 				</div>
@@ -70,7 +54,7 @@
 
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		  <div class="n-container">
+		  <div class="n-container-small">
 
 		    <!--<a class="navbar-brand" href="<?= bloginfo('url'); ?>">Accueil</a>-->
 		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,11 +83,11 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="modalSearchLabel" aria-hidden="true">
   <div class="modal-dialog mt-5" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Rechercher</h5>
+        <h5 class="modal-title" id="modalSearchLabel">Rechercher</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

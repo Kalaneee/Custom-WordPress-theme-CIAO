@@ -15,7 +15,31 @@ Palette :
 #00254F
 */
 
+h1, h1 strong {
+	margin-top: 50px;
+	font-weight: bold;
+	font-size: 40px;
+	position: relative;
+}
 
+h1:after, h1 strong:after {
+	content: '';
+	height: .2em;
+	width: .2em;
+	background: #000;
+	display: block;
+	position: absolute;
+	transform: rotate(45deg);
+	top: 47%;
+	left: -12px;
+}
+
+h2 {
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 25px;
+	color: #00254F;
+}
 
 /* GENERAL */
 * {

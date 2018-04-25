@@ -31,7 +31,7 @@
 											<input class="form-control" type="text" value="" name="s" id="s">
 										</div>
 										<div class="col">
-											<input class="btn btn-primary btn-search" type="submit" id="searchsubmit" value="Rechercher">
+											<button class="btn btn-primary btn-search" type="submit" id="searchsubmit" value="Rechercher"><span>Rechercher</span></button>
 										</div>
 									</div>
 								</form>

@@ -2,6 +2,16 @@
 <html <?php language_attributes(); ?>>
 <head>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12543305-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-12543305-4');
+	</script>
+
 	<!-- General -->
 	<meta charset="<?php bloginfo('charset'); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -99,7 +109,7 @@
 						<input class="form-control" type="text" value="" name="s" id="s">
 					</div>
 					<div class="col">
-						<input class="btn btn-primary btn-search" type="submit" id="searchsubmit" value="Rechercher">
+						<button class="btn btn-primary btn-search" type="submit" id="searchsubmit" value="Rechercher"><span>Rechercher</span></button>
 					</div>
 				</div>
 			</form>

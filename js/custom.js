@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
 	    }
 	});
 
+
 	// Color the dropdown if active
 	var listDropdown = ["ciao.ch", "Documents", "Devenir membre"];
 	var elemDropdownActive = $('.current-menu-item > a').attr("title");
@@ -18,10 +19,12 @@ jQuery(document).ready(function($) {
 		$('.dropdown-toggle.nav-link').css('color', '#7CD0F5');
 	}
 
+
 	// Add slideDown animation to Bootstrap dropdown when expanding.
 	$('.dropdown').on('show.bs.dropdown', function() {
 		$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
 	});
+
 
 	// Add slideUp animation to Bootstrap dropdown when collapsing.
 	$('.dropdown').on('hide.bs.dropdown', function() {
@@ -52,6 +55,7 @@ jQuery(document).ready(function($) {
 	 $('.btn-next-art').addClass('hide-after');
 	}
 
+
 	// Change the text of the pagination on mobile
 	if ($(window).width() < 780) {
 
@@ -59,6 +63,7 @@ jQuery(document).ready(function($) {
 	 	$('.next.page-numbers').text('»');
 	 	$('.pagination-wrapper').css('width', '100%').addClass('d-flex').addClass('justify-content-around');
 	 }
+
 
 	// Give bootstrap class to input form - Commande page, Contact & devenir membre
 	if (document.getElementById("commandeCiao") || document.getElementById("contact") || document.getElementById("devenir-membre")) {
@@ -77,7 +82,8 @@ jQuery(document).ready(function($) {
 			}
 		});
 
-	} // fin page commande & contact
+	} // End page commande & contact
+
 
 	// Make the cards the same height - Commande Page
 	if (document.getElementById("commandeCiao")) {
@@ -97,7 +103,21 @@ jQuery(document).ready(function($) {
 		$('.card-body input').val(0);
 
 
-	} // fin page commande
+	} // End page commande
+
+
+	// Add line before h1 in articles
+	var blacklistPages = ["commander"]; // Add here the names of the pages you want to blacklist from this line effect on h1
+	var path = window.location.pathname;
+	var page = path.split("/")[1]
+	console.log( page );
+
+	if (blacklistPages.indexOf(page) === -1) {
+		if (!$('h1').parent().is('.col-12')) {
+				$( "h1" ).before( "<hr class=\"divider\"></hr" );
+		}
+	}
+
 
 
 }); // fin du ready

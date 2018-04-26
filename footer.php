@@ -23,7 +23,7 @@
 				if ($pagename == "newsletter") {
 					echo '<hr class="m-3">';
 					echo '<div class="last-newsletters p-3">';
-					echo '<h2>Les dernières newsletters</h2>';
+					echo '<h2 class="h2-articles mt-0">Les dernières newsletters</h2>';
 					echo do_shortcode('[catlist name=newsletter]');
 					echo '</div';
 				}

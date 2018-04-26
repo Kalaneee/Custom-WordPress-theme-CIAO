@@ -2,7 +2,7 @@
 
 	<section>
 		<div class="container">
-			
+
 				<?php if(have_posts()): ?>
 				<?php while(have_posts()): the_post(); ?>
 					<div class="row mb-3">
@@ -10,14 +10,14 @@
 
 
 							<div class="title">
-								<?php 
+								<?php
 								global $pagename;
 								if ($pagename == "ciao-ch") {
-									the_title(); 
+									the_title();
 									echo " offre";
 								}
 								else {
-									the_title(); 
+									the_title();
 								}
 							?>
 								<img src="<?= get_template_directory_uri(); ?>/assets/blue-line.png" class="blue-line">

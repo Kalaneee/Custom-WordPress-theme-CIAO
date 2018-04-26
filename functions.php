@@ -207,7 +207,7 @@ function get_img_article() {
 
 // Attention a comment ce code si vous voulez debug
 // du JS dans la console
-
+/*
 // silencer script
 function jquery_migrate_silencer() {
     // create function copy

@@ -54,6 +54,16 @@ h2.h2-articles {
 	color: #00254F;
 }
 
+a {
+	color: #29B6F6;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #00254F;
+	transition: 0.4s;
+}
+
 .m-dw-30 {
 	margin-bottom: 30px;
 }

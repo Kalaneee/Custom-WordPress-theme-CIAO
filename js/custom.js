@@ -110,7 +110,6 @@ jQuery(document).ready(function($) {
 	var blacklistPages = ["commander"]; // Add here the names of the pages you want to blacklist from this line effect on h1
 	var path = window.location.pathname;
 	var page = path.split("/")[1]
-	console.log( page );
 
 	if (blacklistPages.indexOf(page) === -1) {
 		if (!$('h1').parent().is('.col-12')) {

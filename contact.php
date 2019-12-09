@@ -44,7 +44,7 @@ get_header(); ?>
                             CCP: 10-5261-6</p>
                     </div>
                     <hr>
-                    <iframe class=".embed-responsive-item" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPI6J6kvlnEK3ALA-hJjzLzzDZ_32lyXs
+                    <iframe class=".embed-responsive-item" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=ADD_API_KEY_HERE
 							    &q=AvDeRiantMont+1,Lausanne+VD" allowfullscreen>
                     </iframe>
                 </div>

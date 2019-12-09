@@ -1,0 +1,12 @@
+/* MODAL */
+.modal.fade.show {
+	padding-right: 0px !important;
+}
+
+.modal-open {
+	overflow: scroll;
+}
+
+.modal-dialog {
+	top: 40px;
+}

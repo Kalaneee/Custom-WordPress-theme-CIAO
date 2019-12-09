@@ -1,0 +1,63 @@
+/* BTN PRIMARY */
+.btn {
+	border-radius: 0px;
+}
+
+.btn a, .btn span {
+	color: #fff;
+	text-decoration: none;
+	position: relative;
+	z-index: 2;
+}
+
+.btn-primary, .btn-primary:hover {
+	border: none !important;
+	background-color: #7CD0F5;
+	position: relative;
+}
+
+.btn-primary:after {
+	position: absolute;
+  content: '';
+  top: 0;
+ 	left: 0;
+  width: 100%;
+  height: 100%;
+	background: linear-gradient(to left, #00254F, #7CD0F5) !important;
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+	z-index: 1;
+}
+
+.btn-primary:hover:after {
+	opacity: 1
+}
+
+.btn-primary.hide-after:hover:after {
+	opacity: 0;
+	cursor: default;
+}
+
+/* BTN DOUBLE */
+.btn-double {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-double .btn:first-child,
+.btn-double .btn:first-child::after {
+  border-radius: 55px 0 0 55px;
+}
+
+.btn-double .btn:last-child {
+  border-radius: 0 55px 55px 0;
+}
+
+.btn-double .btn:last-child::after {
+  border-radius: 0 55px 55px 0;
+  background: linear-gradient(to right, #00254F, #7CD0F5) !important;
+}
+
+.btn-double .btn:first-child {
+  border-right: 1px solid#EEEEEE !important;
+}

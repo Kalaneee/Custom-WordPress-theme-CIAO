@@ -1,0 +1,152 @@
+/* FOOTER */
+.footer {
+	margin-top: 15px;
+  background: #2e2630;
+  border-top: 5px solid #7CD0F5;
+  color: #fff;
+}
+
+.footer p {
+	line-height: 48px;
+	margin-bottom: 0;
+}
+
+.footer a {
+  text-decoration: none;
+	color: #fff;
+}
+
+.footer a:hover {
+	color: #7CD0F5 !important;
+}
+
+/* @media (max-width: 504px) {
+	.footer p, .footer a{
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 340px) {
+	.footer p, .footer a{
+		font-size: 11px;
+		text-align: center;
+		line-height: 20px;
+		padding: 10px 0;
+	}
+} */
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.footer-left {
+  padding-right: 100px;
+  border-right: 1px solid rgba(124, 208, 245, .5);
+}
+
+.footer-left a {
+  display: block;
+}
+
+.footer-logo {
+  display: block;
+  width: 120px;
+}
+
+.footer-socials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-socials .fa {
+  font-size: 20px;
+}
+
+/* Footer Menu */
+.menu-footer-menu-container {
+  padding-left: 100px;
+}
+
+#menu-footer-menu,
+#menu-footer-menu .sub-menu {
+  list-style-type: none;
+}
+
+#menu-footer-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-footer-menu > li:not(:last-child) {
+  padding-right: 60px;
+}
+
+.sub-menu {
+  padding: 0;
+}
+
+.footer .menu-item-has-children {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer .menu-item-has-children > a {
+  text-transform: uppercase;
+  font-size: 18px;
+  display: block;
+  padding: 0 0 12px 0;
+  cursor: default;
+}
+
+.footer .menu-item-has-children > a:hover {
+  color: #fff !important;
+}
+
+.footer .menu-item:not(.menu-item-has-children) a {
+  display: block;
+  padding: 6px 0;
+  color: #E2E8F0;
+}
+
+@media (max-width: 768px) {
+	.footer-content {
+    flex-direction: column-reverse;
+    padding: 10px 0 0 0;
+  }
+  
+  .menu-footer-menu-container {
+    padding: 0;
+  }
+
+  #menu-footer-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-left {
+    margin: 20px 0 0 0;
+    padding: 20px 0 0 0;
+    border-right: none;
+    border-top: 1px solid rgba(124, 208, 245, .5);
+    text-align: center;
+  }
+
+  .footer-socials {
+    max-width: 200px;
+    margin: 20px auto;
+  }
+
+  .footer-copyright p {
+    line-height: 1.5;
+    padding-bottom: 35px;
+  }
+
+  .footer .copyright {
+    display: block;
+  }
+}

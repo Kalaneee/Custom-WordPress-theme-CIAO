@@ -1,0 +1,31 @@
+/* DOCUMENTS */
+#documents .card img {
+  transform: scale(1.01);
+  transition: 1s ease;
+}
+
+#documents .card:hover img {
+  transform: scale3d(1.1, 1.1, 1);
+}
+
+#documents .card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.03), 0 3px 1px -2px rgba(0, 0, 0, 0.03), 0 1px 5px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+}
+
+#documents .img-wrap {
+  border-radius: 2px 2px 0px 0px;
+  overflow: hidden;
+}
+
+#documents .right {
+  float: right;
+}
+
+#documents .card-footer small i.zmdi {
+  font-size: 20px;
+}
+
+#documents .card-deck {
+  margin-bottom: 25px;
+}
